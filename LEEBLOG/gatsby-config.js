@@ -3,7 +3,7 @@ module.exports = {
     title: `개발 블로그`,
     description: `저를 표현한 블로그입니다.`,
     author: `Hyeok`,
-    siteUrl: 'https://lgh0801.github.io/',
+    // siteUrl: 'https://lgh0801.github.io/',
   },
   plugins: [
     {
@@ -13,13 +13,13 @@ module.exports = {
         allExtensions: true,
       },
     },
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: 'https://lgh0801.github.io/',
-        stripQueryString: true,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-canonical-urls',
+    //   options: {
+    //     siteUrl: 'https://lgh0801.github.io/',
+    //     stripQueryString: true,
+    //   },
+    // },
     `gatsby-plugin-emotion`,
     //`gatsby-plugin-react-helmet`,
     {
