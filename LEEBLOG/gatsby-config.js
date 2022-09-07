@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `개발 블로그`,
-    description: `저를 표현한 블로그입니다.`,
+    title: `주니어 프론트엔드 개발자의 개발 블로그`,
+    description: `주니어 프론트엔드 개발자로서의 저를 표현한 블로그입니다.`,
     author: `Hyeok`,
-    // siteUrl: 'https://lgh0801.github.io/',
+    siteUrl: 'https://lgh0801.github.io/',
   },
   plugins: [
     {
@@ -13,15 +13,16 @@ module.exports = {
         allExtensions: true,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-canonical-urls',
-    //   options: {
-    //     siteUrl: 'https://lgh0801.github.io/',
-    //     stripQueryString: true,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://lgh0801.github.io/',
+        stripQueryString: true,
+      },
+    },
     `gatsby-plugin-emotion`,
-    //`gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -82,6 +83,12 @@ module.exports = {
             options: {
               target: '_blank',
               rel: 'nofollow',
+            },
+          },
+          {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+              policy: [{ userAgent: '*', allow: '/' }],
             },
           },
         ],

@@ -6,11 +6,12 @@ export type PostFrontmatterType = {
     categories: string[]
     summary: string
     thumbnail: {
-        childImageSharp: {
-            gatsbyImageData: IGatsbyImageData
-        }
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
+      publicURL: string
     }
-  }
+}
   
 export type PostListItemType = {
   node: {

@@ -7,44 +7,50 @@ import PostContent from 'components/Post/PostContent'
 import CommentWidget from 'components/Post/CommentWidget'
 
 type PostTemplateProps = {
-    data: {
-        allMarkdownRemark: {
-            edges: PostPageItemType[]
-        }
+  data: {
+    allMarkdownRemark: {
+      edges: PostPageItemType[]
     }
+  }
+  location: {
+    href: string
+  }
 }
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
-   data: {
-    allMarkdownRemark: {edges},
-   }, 
+  data: {
+    allMarkdownRemark: { edges },
+  },
+  location: { href },
 }) {
-    const {
-        node: {
-            html,
-            frontmatter: {
-                title,
-                summary,
-                date,
-                categories,
-                thumbnail: {
-                    childImageSharp: {gatsbyImageData},
-                },
-            },
+  const {
+    node: {
+      html,
+      frontmatter: {
+        title,
+        summary,
+        date,
+        categories,
+        thumbnail: {
+          childImageSharp: { gatsbyImageData },
+          publicURL,
         },
-    } = edges[0]
-    return(
-        <Template>
-        <PostHead
-          title={title}
-          date={date}
-          categories={categories}
-          thumbnail={gatsbyImageData}
-        />
-        <PostContent html={html}/>
-        <CommentWidget/>
-      </Template>
-    )
+      },
+    },
+  } = edges[0];
+
+  return (
+    <Template title={title} description={summary} url={href} image={publicURL}>
+      <PostHead
+        title={title}
+        date={date}
+        categories={categories}
+        thumbnail={gatsbyImageData}
+      />
+      <PostContent html={html} />
+      <CommentWidget />
+    </Template>
+  )
 }
 
 export default PostTemplate
@@ -64,6 +70,7 @@ export const queryMarkdownDataBySlug = graphql`
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }
