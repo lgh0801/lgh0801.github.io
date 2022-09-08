@@ -1,6 +1,6 @@
 ---
 date: '2022-03-20'
-title: 'React로 간단한 영화 Clone사이트 만들기'
+title: 'React로 간단한 영화 Clone사이트'
 categories: ['Web', 'React', 'API']
 summary: 'React와 API를 활용하여 영화 사이트 CloneCoding을 해보자.'
 thumbnail: './moviethumbnail.PNG'
