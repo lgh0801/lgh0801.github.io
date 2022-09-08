@@ -38,4 +38,4 @@ React,NodeJS,MongoDB,API를 사용했습니다.
 
 ---
 
-강의 출처 (https://www.youtube.com/watch?v=e8xMcMXqYGw&list=PL9a7QRYt5fqkowXUgTj_tbkFClsPhO5XV&ab_channel=JohnAhn)
+강의 링크: https://www.youtube.com/watch?v=e8xMcMXqYGw&list=PL9a7QRYt5fqkowXUgTj_tbkFClsPhO5XV&ab_channel=JohnAhn

@@ -1,7 +1,7 @@
 ---
 date: '2022-03-15'
 title: 'React로 간단한 유튜브 Clone사이트 만들기'
-categories: ['CodingTest', 'Javascript']
+categories: ['Web', 'React']
 summary: 'React를 사용하여 유튜브 사이트 CloneCoding을 해보자.'
 thumbnail: './youtubethumbnail.PNG'
 ---
@@ -40,4 +40,4 @@ React,NodeJS,MongoDB를 사용했습니다.
 
 ---
 
-강의 출처 (https://www.youtube.com/watch?v=fM0Vj7dBcm8&list=PL9a7QRYt5fqnlSRu--re7N_1Ean5jFsh3&ab_channel=JohnAhn)
+강의 링크: https://www.youtube.com/watch?v=fM0Vj7dBcm8&list=PL9a7QRYt5fqnlSRu--re7N_1Ean5jFsh3&ab_channel=JohnAhn
