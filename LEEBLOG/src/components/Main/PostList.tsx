@@ -28,7 +28,8 @@ const PostList: FunctionComponent<PostListProps> = function({selectedCategory,po
   const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(selectedCategory, posts);
 
   return (
-    <PostListWrapper ref={containerRef}>
+    //화면에 보이는지 체크하기 위한 특정 요소를 선택하기 위해, 상위 요소인 PostListWrapper를 연결해야 함
+    <PostListWrapper ref={containerRef}> 
       {postList.map(
         ({
           node: {

@@ -58,7 +58,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
 
             <div>
                 <SubTitle>근두리의 블로그</SubTitle>
-                <Title>개발 일지</Title>
+                <Title>기술 일지</Title>
             </div>
         </Wrapper>
       </Background>
