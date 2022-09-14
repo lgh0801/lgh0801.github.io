@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.22.0"/><meta data-react-helmet="true" name="description" content="Javascript Map 메소드 사용하기"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="Gatsby"/><meta data-react-helmet="true" property="og:description" content="Javascript Map 메소드 사용하기"/><meta data-react-helmet="true" property="og:image" content="/static/35e7cf2fa052510072e95a9d133e49a4/gatsbythumbnail.png"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="Gatsby"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="Gatsby"/><meta data-react-helmet="true" name="twitter:description" content="Javascript Map 메소드 사용하기"/><meta data-react-helmet="true" name="twitter:image" content="/static/35e7cf2fa052510072e95a9d133e49a4/gatsbythumbnail.png"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><style data-href="/styles.710ba525502dd431a17c.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><link rel="canonical" href="https://lgh0801.github.io/gatsby/" data-baseprotocol="https:" data-basehost="lgh0801.github.io"/><title data-react-helmet="true">Gatsby</title><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1strnqo0"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1500px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;750&#x27; width=&#x27;1500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABo0lEQVQoz32SSy8DURTH7+dBiGDhE/ARxKbiVZGwsxNhazke1Va8F2hi2oYJxXj0NaVmqNBpp6aJRwxJ69GU3rlz7zAzJKThLE5O7sn/3F/+5wB7vbOzdqq3cTqweHa0KXFM+u0V6rpOiP5PqFAT2CywN7hsleOzQ6ywlz1cu7zL5Ezln1Krc5VQQl4RtFVNjLR44tuZsE+8iF5bMkL074L8HGTVuftC2C/GGAn0Nk5vLyWOtzIGcAGqED3cPmHN0GCMy39GUON35eh6KuIXwdzwvsBmg/QXcGAlPtg6c+BLpCRR4AXJDI7jFEWBEFrAQTrJszLVxwDOnHER+QIOrMZH+5aD/gQvnMzPLzgcDo/HQ1GU2+2Gaun5sRj2JU92ZHos1lU7BaIbaY5JF19LFlXh+S11egPfEcYYISMTQhBC+XxeU7EJnI74UwNNi+3VkyDkTd5KufLd/PbJyPK5EqQvT/eyVD9jq5joaXAB0+GfIp1gUr4bw2GfyO/K9Hiso8bRXefsrnOC4kvpv5Mw35GqCazhcMibHGheaq+etNe7PsUf9qn9VzSSj78AAAAASUVORK5CYII=" alt=""/><picture><source type="image/webp" data-srcset="/static/35e7cf2fa052510072e95a9d133e49a4/17c6e/gatsbythumbnail.webp 375w,/static/35e7cf2fa052510072e95a9d133e49a4/d4f89/gatsbythumbnail.webp 750w,/static/35e7cf2fa052510072e95a9d133e49a4/dc774/gatsbythumbnail.webp 1500w" sizes="(min-width: 1500px) 1500px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1500px) 1500px, 100vw" decoding="async" loading="lazy" data-src="/static/35e7cf2fa052510072e95a9d133e49a4/42d86/gatsbythumbnail.png" data-srcset="/static/35e7cf2fa052510072e95a9d133e49a4/cd90b/gatsbythumbnail.png 375w,/static/35e7cf2fa052510072e95a9d133e49a4/5ee41/gatsbythumbnail.png 750w,/static/35e7cf2fa052510072e95a9d133e49a4/42d86/gatsbythumbnail.png 1500w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/35e7cf2fa052510072e95a9d133e49a4/17c6e/gatsbythumbnail.webp 375w,/static/35e7cf2fa052510072e95a9d133e49a4/d4f89/gatsbythumbnail.webp 750w,/static/35e7cf2fa052510072e95a9d133e49a4/dc774/gatsbythumbnail.webp 1500w" sizes="(min-width: 1500px) 1500px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1500px) 1500px, 100vw" decoding="async" loading="lazy" src="/static/35e7cf2fa052510072e95a9d133e49a4/42d86/gatsbythumbnail.png" srcSet="/static/35e7cf2fa052510072e95a9d133e49a4/cd90b/gatsbythumbnail.png 375w,/static/35e7cf2fa052510072e95a9d133e49a4/5ee41/gatsbythumbnail.png 750w,/static/35e7cf2fa052510072e95a9d133e49a4/42d86/gatsbythumbnail.png 1500w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">Gatsby</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>Gatsby / Framework</div><div>2022.04.11.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><h2>Gatsby</h2>
+<p>Gatsby는 React 및 GraphQL을 사용하여 Node.js 위에 구축된 오픈 소스 정적 사이트 생성기입니다.</p>
+<p>서버를 사용하지 않고 정적 사이트를 생성하고 싶을 때 사용할 수 있는 React기반 프레임워크입니다.</p>
+<h2>JAM Stack</h2>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/39d44ace7005a462ca04e9992017e95c/d6170/jamstack1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.35416666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbklEQVQoz22SS0/CQBRG+eWIrNxgYmKJC2VjojsXrkiskogLYxQSQ4w2ioqAoCn4oNLOdOaYKX35uEnbO3c6535z8xUAtNbRk0Q+V0r9m+f/yTMKyYb5NhoNPM9L12EYRnm9Xse27Sg3teSMlJJqtUqtVkvBhaTr01Mfy7IQUqbAZK9SqbBuWX+AQgiKxSLl5TLEggvRYRXy7rpMJ1PCQJJXbcIPBHNvFtf4ofDjc8aXP88UmpcnFd255uXzg/adgyKbqeM43HfvmPow8YxinUKDIMAXPq/DNwZdNwFqXA1NDb2vGftOO72aiaWlEiurG4weW9zcXiCiPotxTF4nSDGn0+xjb19lCsPeM+O1XfRwANenIEUyEjy3hzcyTRRazmJ1i9l2p30u325pnbewDw4zoHwcMl7dQToddHMPrVR65XB4hhodx96I1cXAo4cz9gcn1Da3KC2XFsA/fsr7zHgrrhlVOl7/9qFWmSO+AXIzq7wzFsOfAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/39d44ace7005a462ca04e9992017e95c/a59e9/jamstack1.webp 192w,
+/static/39d44ace7005a462ca04e9992017e95c/0ca9f/jamstack1.webp 384w,
+/static/39d44ace7005a462ca04e9992017e95c/dc9b9/jamstack1.webp 768w,
+/static/39d44ace7005a462ca04e9992017e95c/16274/jamstack1.webp 850w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/39d44ace7005a462ca04e9992017e95c/3b721/jamstack1.png 192w,
+/static/39d44ace7005a462ca04e9992017e95c/66595/jamstack1.png 384w,
+/static/39d44ace7005a462ca04e9992017e95c/fe486/jamstack1.png 768w,
+/static/39d44ace7005a462ca04e9992017e95c/d6170/jamstack1.png 850w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/39d44ace7005a462ca04e9992017e95c/fe486/jamstack1.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/gatsby/jamstack2.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/gatsby/jamstack2.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>Gatsby는 JAM Stack을 활용한 정적 사이트 생성기입니다.</p>
+<p>JAM Stack은 Javascript, Api, MarkUp Stack의 약자로 이 3가지로 웹을 구성하는 방법입니다.</p>
+<p>JAM Stack의 공식홈페이지에서는 다음과 같이 설명합니다.</p>
+<p>JAM Stack 은 더 빠르고, 안전하며, 스케일링하기 쉬운 웹을 만들기 위해 디자인된 아키텍처입니다.</p>
+<h2>JAM Stack의 동작원리</h2>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 665px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5cd6941be5985c607bd9273a8fb01307/a300e/jamstack2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.60416666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2klEQVQoz4WS3UtTcRjHd+HmZG3n9zvn7OzsnLMd93J2Nje36UyN+ZrbdGhCUkZ11UUS1E2olVjRCwYFUYIvuHxJ50RrLm0um29pznIhM3AIhhAU+Bd04U0UNqGLiMHDc/E8zwe+H3gEEhlJMRxvytPqc3VcLsfbpIhSBiiIMRBjAMYcgcoshCAYrcZo1fC5OKXJQggpenAgyNbmWKyF5ZXesvJqZ6nLWVKl43JJSgtQGmIMhqn0JK8lOAd/1F3oqSpwWbV5OsLAKvQH8OZmYnU1trS0FHo1NT+/sLy8kkwmW1rbhCIgw2kLbfnRMPrz1MT+ycBXb89erW+/IfCrcfKj56EMpQQzM5FgMBQMhkb8gYmJl8FgKBqdu9h0OVOMIjjNUzlb3s7dut6duu6NmsefvU92aru+1fsmy9sQlBYAlAYojUCKYjgUVyOQSk1SzhClMKlcpWAJQCogjUOGwNQ0qQOI8iC2iuVVLM9qTAbertGZVWpenW1UKLUAPSBRhof2SrLYixd4IOcgWANttKnN+QqNCSXUgkQiEYvFIpHZcHgmEnmzsvI+mdxqbrmRIUYxGS6vOstO7an61tnQd2Vrv+1EfXXH/ep7d/JOn8EI9tDZ7x8bHg6ktFPOoiwMAwo830W1+6mr3dTNUUVjM3es1OT2Go979M4KOa07dAYoraQ5nGD/dYaAhOBPT60gBeDhFwg43sbxNoPRbrEVmcwOvcFqMNppleEv//8SJJNbGxsbi0vvotG5+YXFeHx9d/fLrdt3hZkQJ9Rp4OBkaHz8xcDgsO/Z4NDzkcDYeDgcabp0JTMLw+TpYGEmlAKlSIwikBKJoURGCsVQLMFRXJU+dlFxRUmZ21FYSpAaR4HTXVPv8tSZzPkyoEzLC1Zja7Nvo2trH5ylrunp1/H4p+3t7Y4HjzJEACfYNHD/wFBPr8/nG7Dai69db3/a2dXb23fu/AWxBE/r/Bt1pfEm82mMcQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/5cd6941be5985c607bd9273a8fb01307/a59e9/jamstack2.webp 192w,
+/static/5cd6941be5985c607bd9273a8fb01307/0ca9f/jamstack2.webp 384w,
+/static/5cd6941be5985c607bd9273a8fb01307/3b141/jamstack2.webp 665w"
+              sizes="(max-width: 665px) 100vw, 665px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/5cd6941be5985c607bd9273a8fb01307/3b721/jamstack2.png 192w,
+/static/5cd6941be5985c607bd9273a8fb01307/66595/jamstack2.png 384w,
+/static/5cd6941be5985c607bd9273a8fb01307/a300e/jamstack2.png 665w"
+            sizes="(max-width: 665px) 100vw, 665px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/5cd6941be5985c607bd9273a8fb01307/a300e/jamstack2.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/gatsby/jamstack2.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/gatsby/jamstack2.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>기존 웹 사이트트의 방식은 대부분 서버의 데이터베이스 or CMS(Content Management System)에서 추출한 데이터를</p>
+<p>프론트엔드에 뿌려주는 방식입니다.</p>
+<p>사진에서 보이는 것과 같이 클라이언트에 데이터를 보여주기 위해서 많은 절차를 거쳐야만 하고, 따라서 구조도 복잡합니다.</p>
+<p>하지만 JAM Stack을 사용한 방식은 기존 웹 사이트의 방식과 다르게 절차가 간단합니다</p>
+<p>마크업 요소와 다양한 API를 통해 만든 정적 웹사이트를 Pre-render하고,</p>
+<p>그것을 CDN(Content Delivery Network)를 통해 웹 사이트를 열람할 수 있습니다.</p>
+<ul>
+<li>
+<p>기존 방식보다 더 빠르게 웹사이트를 제공할 수 있다.</p>
+<ul>
+<li>
+<p>JAM Stack은 렌더링할 화면들을 모두 Pre-render 하여 제공하기 때문에</p>
+<p>그만큼 사용자에게 화면을 보여주기 위해 준비하는 시간을 단축할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>안전한 웹 사이트를 제공할 수 있다.</p>
+<ul>
+<li>
+<p>JAM Stack은 API를 통해 정적 사이트를 생성합니다.</p>
+<p>여기서 사용되는 API는 JAM Stack을 활용한 각 프레임워크에서의 마이크로 서비스로서,</p>
+<p>사이트 생성을 위한 프로세스가 추상화되어 있음으로 그만큼 공격 노출 범위가 감소하게 됩니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>왜 Gatsby인가?</h2>
+<p>대표적인 JAM Stack 기반 프레임워크는 gatsby,jekyll,next,nuxt가 있습니다.</p>
+<h2><img src="/d41d8cd98f00b204e9800998ecf8427e/trend.png" alt="file:///C:/Reactblog/LEEBLOG/static/gatsby/trend.PNG"></h2>
+<p>위 사진은 2022년 최근 1년간 다운로드 횟수를 나타낸 그래프입니다.</p>
+<p>Next.js 의 다운로드 수가 제일 많고,</p>
+<p>다음으로 Gatsby 와 nust가 서로 경쟁을 합니다.</p>
+<p>그렇다면 더 인기가 많은 Next.js 가 아닌 Gatsby 를 사용하는 이유는 무엇일까요?</p>
+<p>두 프레임워크의 사용 용도가 다르기 때문입니다.</p>
+<p>Next.js 는 정적 사이트 생성의 기능도 있지만 주로 서버 사이드 렌더링을 위해 사용하는 프레임워크입니다.</p>
+<p>즉, 서버와 통신을 하며 요청을 받을 때마다 동적으로 웹 사이트를 생성합니다.</p>
+<p>하지만 Gatsby 는 서버 없이, 오로지 정적 사이트 생성을 위해 사용하는 프레임워크입니다.</p>
+<p>JavaScript 가 실행되면 빈 HTML 페이지 안에 마크업을 추가해주는 SPA(Single Page Application) 와 다르게,</p>
+<p>개발 후 Build 과정에서 마크업이 생성됩니다.</p></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">제 블로그에 방문해주셔서 감사합니다. 😊</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/gatsby/";window.___webpackCompilationHash="9f5a343bac024747731a";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-5364d16a56eba8b4496f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-da0f1354074b3fb451dc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-31b1b037074fc603b07d.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c7dc62ecd5c83f0034b0.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-5364d16a56eba8b4496f.js" async=""></script><script src="/framework-c57a9454c0e3bef16c3b.js" async=""></script><script src="/webpack-runtime-ed14da73140b30fdea27.js" async=""></script></body></html>
