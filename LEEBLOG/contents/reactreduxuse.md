@@ -1,5 +1,5 @@
 ---
-date: '2022-03-01'
+date: '2022-03-12'
 title: 'React Redux 사용&적용'
 categories: ['React', 'Redux']
 summary: 'Redux 직접 사용해보자'

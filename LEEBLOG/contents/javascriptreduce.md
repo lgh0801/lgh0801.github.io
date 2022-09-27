@@ -1,5 +1,5 @@
 ---
-date: '2022-03-11'
+date: '2022-03-01'
 title: 'Javascript Reduce 메소드'
 categories: ['Javascript']
 summary: 'Javascript Reduce 메소드 사용하기'
