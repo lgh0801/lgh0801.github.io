@@ -1,7 +1,7 @@
 ---
 date: '2022-03-12'
 title: 'React Redux 사용&적용'
-categories: ['React', 'Redux']
+categories: ['React']
 summary: 'Redux 직접 사용해보자'
 thumbnail: './reactthumbnail.png'
 ---

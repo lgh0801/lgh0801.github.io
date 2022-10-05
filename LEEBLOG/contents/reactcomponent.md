@@ -1,7 +1,7 @@
 ---
 date: '2022-03-11'
 title: 'React 클래스형,함수형'
-categories: ['React', 'Component']
+categories: ['React']
 summary: 'React 클래스형, 함수형 컴포넌트 차이'
 thumbnail: './reactthumbnail.png'
 ---
