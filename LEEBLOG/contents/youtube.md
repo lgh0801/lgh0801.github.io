@@ -2,7 +2,7 @@
 date: '2022-03-15'
 title: 'React로 간단한 유튜브 Clone사이트'
 categories: ['Web', 'React']
-summary: 'React를 사용하여 유튜브 사이트 CloneCoding을 해보자.'
+summary: '강의를 보며 유튜브 사이트 CloneCoding을 해보자'
 thumbnail: './youtubethumbnail.PNG'
 ---
 
