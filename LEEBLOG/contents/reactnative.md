@@ -59,40 +59,40 @@ Travel을 클릭하고 앱을 껐다키면 기본값이 클릭한걸로 남아�
 클릭한 부분에 bool값을 저장소에 저장해서 켰을때 값을 다시 불러오면됩니다.
 
 ```javascript
-import React, {useState, useEffect} from 'react';
-import {Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useState, useEffect } from 'react'
+import { Text, StyleSheet, TouchableOpacity, Alert } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const WORK_KEY = '@work'
 
 export default function App() {
-  const [working, setWorking] = useState(true);
+  const [working, setWorking] = useState(true)
 
-  const travel = async() =>  {
-    setWorking(false);
-    await AsyncStorage.setItem(WORK_KEY, 'false'); //AsyncStorage에 저장
+  const travel = async () => {
+    setWorking(false)
+    await AsyncStorage.setItem(WORK_KEY, 'false') //AsyncStorage에 저장
   }
 
-  const work = async() => {
+  const work = async () => {
     setWorking(true)
-    await AsyncStorage.setItem(WORK_KEY, 'true');  //AsyncStorage에 저장
-  };
+    await AsyncStorage.setItem(WORK_KEY, 'true') //AsyncStorage에 저장
+  }
 
-  const lodeToDos = async() => {
+  const lodeToDos = async () => {
     try {
-      const w = await AsyncStorage.getItem(WORK_KEY); // 저장 값을 불러옴
-      if(w !== null) {
-        setWorking(JSON.parse(w)); //문자열을 true로 변환한걸 setWorking
+      const w = await AsyncStorage.getItem(WORK_KEY) // 저장 값을 불러옴
+      if (w !== null) {
+        setWorking(JSON.parse(w)) //문자열을 true로 변환한걸 setWorking
       }
-    } catch(error) {
-       Alert.alert('list error');
+    } catch (error) {
+      Alert.alert('list error')
     }
   }
   useEffect(() => {
-    lodeToDos();
-  },[]);
+    lodeToDos()
+  }, [])
 
-  return(
+  return (
     <TouchableOpacity onPress={work}>
       <Text style={{...styles.btnText, color: working ? "white" : theme.gray}}>Work</Text>
     </TouchableOpacity>
@@ -103,12 +103,11 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-    btnText: {
-      fontSize: 38,
-      fontWeight:'600',
-    },
-})
-
+  btnText: {
+    fontSize: 38,
+    fontWeight: '600',
+  },
+});
 ```
 
 코드 첼린지 완료 전체 소스 코드: https://snack.expo.dev/kM2BvKDZl?platform=ios
@@ -337,6 +336,12 @@ export default function App() {
   }
 
   return (
+    <TouchableOpacity onPress={work}>
+      <Text style={{...styles.btnText, color: working ? "white" : theme.gray}}>Work</Text>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={travel}>
+      <Text style={{...styles.btnText, color: working ? theme.gray : "white"}}>Travel</Text>
+    </TouchableOpacity>
     <ScrollView>
       {Object.keys(toDos).map(
         key =>
@@ -367,14 +372,10 @@ export default function App() {
                 />
               )}
               <Text>
-                <TouchableOpacity
-                  onPress={() => completTodo(key, toDos[key].complet)}
-                >
+                <TouchableOpacity onPress={() => completTodo(key, toDos[key].complet)}>
                   <Text>✅</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => updateTodo(key, toDos[key].complet)}
-                >
+                <TouchableOpacity onPress={() => updateTodo(key, toDos[key].complet)}>
                   <Text>✂</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => deleteTodo(key)}>
