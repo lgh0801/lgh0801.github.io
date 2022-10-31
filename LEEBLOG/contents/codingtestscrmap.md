@@ -1,6 +1,6 @@
 ---
 date: '2022-05-01'
-title: '비밀지도'
+title: '비밀지도[Kakao]'
 categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
 summary: '암호화된 지도를 풀어보자'
 thumbnail: './codingtestthumbnail.png'
