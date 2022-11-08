@@ -1,5 +1,5 @@
 ---
-date: '2022-07-19'
+date: '2022-07-02'
 title: 'Redux-persist'
 categories: ['React']
 summary: 'Redux-persist란 무엇인가'
