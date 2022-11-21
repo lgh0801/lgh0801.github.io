@@ -1,8 +1,8 @@
 ---
 date: '2022-08-01'
-title: '성격 유형 검사하기[Kakao]'
+title: '두 큐 합 같게 만들기'
 categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
-summary: '문제에 알맞은 성격유형을 찾아보자'
+summary: '각 큐의 원소 합을 같게 만들자'
 thumbnail: './codingtestthumbnail.png'
 ---
 
