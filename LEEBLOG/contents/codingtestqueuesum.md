@@ -1,6 +1,6 @@
 ---
 date: '2022-08-01'
-title: '두 큐 합 같게 만들기'
+title: '두 큐 합 같게 만들기[Kakao]'
 categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
 summary: '각 큐의 원소 합을 같게 만들자'
 thumbnail: './codingtestthumbnail.png'
