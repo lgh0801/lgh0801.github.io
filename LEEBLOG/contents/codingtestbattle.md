@@ -10,7 +10,7 @@ thumbnail: './codingtestthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/programmers/battle.PNG](../static/programmers/battle.PNG)
 
-문제를 보면 다음 라운드로 넘어갈 때 N/2로 참가자 수가 줄어드는 규칙을 발견할 수 있습니다.
+여기서 핵심은 다음 라운드로 넘어갈 때 N/2로 참가자 수가 줄어드는 규칙을 발견할 수 있습니다.
 
 저는 주어진 n에 필요성을 느끼지 못하여 사용하지 않고 문제를 해결했습니다.
 
