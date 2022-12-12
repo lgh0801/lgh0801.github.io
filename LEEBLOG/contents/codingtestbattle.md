@@ -33,23 +33,20 @@ function solution(n, a, b) {
       //모두 짝수일경우
       a = a / 2
       b = b / 2
-      answer++
     } else if (a % 2 === 0 && b % 2 !== 0) {
       //b가 홀수일 경우
       a = a / 2
       b = (b + 1) / 2
-      answer++
     } else if (a % 2 !== 0 && b % 2 === 0) {
       //a가 홀수일 경우
       a = (a + 1) / 2
       b = b / 2
-      answer++
     } else {
       //둘다 홀수일 경우
       a = (a + 1) / 2
       b = (b + 1) / 2
-      answer++
     }
+    answer++
   }
   return answer
 }
