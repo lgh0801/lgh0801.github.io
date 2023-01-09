@@ -1,7 +1,7 @@
 ---
 date: '2022-03-20'
 title: 'React로 간단한 영화 Clone사이트'
-categories: ['Web', 'React']
+categories: ['React']
 summary: '강의를 보며 영화 사이트 CloneCoding을 해보자'
 thumbnail: './moviethumbnail.PNG'
 ---
