@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.22.0"/><meta data-react-helmet="true" name="description" content="Webpack이 무엇인지 알아보자"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="Webpack이란"/><meta data-react-helmet="true" property="og:description" content="Webpack이 무엇인지 알아보자"/><meta data-react-helmet="true" property="og:image" content="/static/e9a85b5a3a7f83d86a85a4c348938bd5/jsthumbnail.png"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="Webpack이란"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="Webpack이란"/><meta data-react-helmet="true" name="twitter:description" content="Webpack이 무엇인지 알아보자"/><meta data-react-helmet="true" name="twitter:image" content="/static/e9a85b5a3a7f83d86a85a4c348938bd5/jsthumbnail.png"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><style data-href="/styles.710ba525502dd431a17c.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><link rel="canonical" href="https://lgh0801.github.io/webpack/" data-baseprotocol="https:" data-basehost="lgh0801.github.io"/><title data-react-helmet="true">Webpack이란</title><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1strnqo0"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1800px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;1012&#x27; width=&#x27;1800&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtUlEQVQoz2P4cCsAF3p/M+Dbg8C/z4I+3Ql8fzPg673Af8+C/j4L+nIXxP1wK4ABn877gSd3eC6Y4vT4vN/PR0FXDnpP73ac0+9096Tv13sg/Tg1v7nu//9FcGeDnbS8zvUjPjeP+TjYGWlp66mo6rq7Gj865/f5Dm7Nb8Ga+1vsVdV0H53znTPBUVZB59gWz5M7PGdPcHx3I+DjbUKa+1rslVV175/xXTvfVU5Bp6bE5sEZ3/+vgiGhgNvZ16CaVdX1rhzyfn8rICvFUl5RV99Av73W7u113DZ/uhPw+W7gv+cgzWoaehf3e/97Efz1YeCmxa7RYeayCjpTOh1+PQ7Covnj7YBnF/2Ob/P8/y6kr9leVU3v+hGf83u9ti93+/8x5M1Nfwtzw+RYi6/3A9E1v7sR8OtxUE+TvbqmXl2pjb2dkZ2t0dvr/jmpVvKKOpWFNsXZ1nKKuh11dlhsfn8z4MvdwOuHfXLTrCzMDf19THeudP/1KOj2cZ/KQmtbGyM7G6PaUpunF/w+3w1kwJo8vt4P/HI38MVl/3c3A74/gCavbw8CX13xf3nF//uDwM/gRAYAl1aM8GLqCagAAAAASUVORK5CYII=" alt=""/><picture><source type="image/webp" data-srcset="/static/e9a85b5a3a7f83d86a85a4c348938bd5/06689/jsthumbnail.webp 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/eca74/jsthumbnail.webp 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/23de5/jsthumbnail.webp 1800w" sizes="(min-width: 1800px) 1800px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1800px) 1800px, 100vw" decoding="async" loading="lazy" data-src="/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png" data-srcset="/static/e9a85b5a3a7f83d86a85a4c348938bd5/602a4/jsthumbnail.png 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/4c0f7/jsthumbnail.png 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png 1800w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/e9a85b5a3a7f83d86a85a4c348938bd5/06689/jsthumbnail.webp 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/eca74/jsthumbnail.webp 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/23de5/jsthumbnail.webp 1800w" sizes="(min-width: 1800px) 1800px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1800px) 1800px, 100vw" decoding="async" loading="lazy" src="/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png" srcSet="/static/e9a85b5a3a7f83d86a85a4c348938bd5/602a4/jsthumbnail.png 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/4c0f7/jsthumbnail.png 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png 1800w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">Webpack이란</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>Javascript</div><div>2022.07.19.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><h2>JavaScript - Webpack</h2>
+<p>그림을 먼저 살펴보겠습니다.</p>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7f73d77aa5b76ad8f10e72048d8f28fc/bbbf7/webpack.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.4375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjUlEQVQoz32SyUoDQRCG5200i1lmX5Kemc7sycREUR9BUDx4ykUIiOBFUCEHL171pL5M3ueXqmRCQsTDT9fUdH/1V1crLTcE6cgJUMVN24cepEimFyxZnsIvJrxG47O9/dtSVD9Btx9tNpEIqIqYISI/hl9M4cYjiHyCfna8A6zOVFJMWUAPMoYaYc6gymXdEjhQHRyq9kq6h4YldmB7Ds1BAUMWDHOSMUsLUrQ9ibYXQgxPcPP4hsv5M6xBwYXoXwWjDjU/ZVO0Kk5SMsSKhgzt5VPoYYaWK1HTXcwWH7j7WmL+vcTV/QuaZo8PrzqRHOthDnNtSrGiEey4hJuOOUnfVImBmoPZ4nMF/CHg6xqYQvMTdkpAQ+YM1YIMCiU2oCBlMLXGLbshgvE5bp/ecf2wgB2P0LQFOr3BZgh2NOT9lRRyo4oEXkr3V6LTi3YuvGZ47KpheKib/b0JUyc8A1lwrLh8hyW6IuHE9rskkdNVTu5NtorJMYmn3OnHMAdDrkBtm9FoZ4p/Af57h78TnGAD2rBtxwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/7f73d77aa5b76ad8f10e72048d8f28fc/a59e9/webpack.webp 192w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/0ca9f/webpack.webp 384w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/dc9b9/webpack.webp 768w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/e2c2f/webpack.webp 1152w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/94b1e/webpack.webp 1280w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/7f73d77aa5b76ad8f10e72048d8f28fc/3b721/webpack.png 192w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/66595/webpack.png 384w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/fe486/webpack.png 768w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/d2d74/webpack.png 1152w,
+/static/7f73d77aa5b76ad8f10e72048d8f28fc/bbbf7/webpack.png 1280w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/7f73d77aa5b76ad8f10e72048d8f28fc/fe486/webpack.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/webpack.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/webpack.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>번들링 과정을 통하여 많은것들이 정리된 느낌입니다.</p>
+<p>웹팩은 대표적인 모듈 번들러 라이브러리입니다.</p>
+<p>모듈 번들러는 여러개의 나누어진 있는 파일들을 하나의 파일로 만들어주는 라이브러리입니다.</p>
+<h2>사용 이유</h2>
+<p>하나의 웹페이지가 로드될 때 여러개의 자바스크립트 파일들을 가져와서 우리앞에 나타납니다.(렌더링)</p>
+<p>그래서 전역적으로 한꺼번에 많은 파일을 불러오면</p>
+<p>충돌이 날 가능성이 높으며 속도 저하가 올 수 있습니다.</p>
+<p>이를 해결하기 위해서 모듈 번들러 라는 아이가 등장하였습니다.</p>
+<p>이 아이는 파일들의 관계(의존성)를 자동으로 파악하고</p>
+<p>혹시라도 뭐가 안맞아서 뻑나지 않도록 그룹핑까지 해줍니다.</p>
+<h2>장점</h2>
+<ul>
+<li>속도가 빠릅니다</li>
+</ul>
+<p>웹팩은 하나의 파일로 로드하기 때문에 로딩속도가 빠릅니다.</p>
+<ul>
+<li>관리가 쉽습니다</li>
+</ul>
+<p>웹팩은 Module 을 사용하여 매우 복잡하고 긴 코드를 작성할 때</p>
+<p>사용 용도에 따라 파일 단위로 구분한 뒤, 다른 파일에서 해당 클래스나 함수가 필요할 때</p>
+<p>가져와서 사용할 수 있도록 해줍니다. 외부 라이브러리의 의존성도 쉽게 관리할 수 있습니다.</p>
+<h2>install</h2>
+<p>이것이 Webpack 인스톨의 가장 간소한 핵심입니다.</p>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/03c7f880f1af3339f62ea2db1ea24bbf/1263b/webpackinstall.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.5625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACCElEQVQoz52STUsbQRiA83c8xqMVwSSCBATBU4VcBNNDoPkL/oCSXCwlIKiY0hKa3lOUHAqmsZSASpIq2tpo1s3HZp1dd3az2TwlK0mr9NQXXmbmneFh5nkn8FMMOD3/wdejI2q1GorSpN/v02g0SKdTbG2lyGRekcmk2Nt7w+7ua7a3N9nf3+dpDIdDAk+LrocPLBQ+cXFxiWGYtNsdhBCUy2UKhQKlUoliscjh4SGVSoWzszMfNorAw8TzF9JQuNdqdLqC68YNju1iGBLbHtBqtQmHQ8zOPmNmZobp6WmCwSBTU1MsLS3hOM4foC5dpOtyrxZpnqS5bZmY3VO05heEYSOlTberkUi8ZH39BclkkkQi4Wc8HmdjYwPXdR+AnufxvePRUj9jdmrUz3vcXKvc3d2h97r+oX7fxbYdTk6qVCrHvutR1ut1qtUqV1dXE2WPHApxz+XFLzTNoKcLFEXx6543RFXbrK4+Z3l5mWg0yuLioj9GIhHW1tZ875Mnj4Valo2uG+i6ibQkpmkyHHqMtm9v1Qns75yfnycWiz12OAbadt+/pTA9RPsY0fqGJQe47gBFUVlYiBAOhwmFQj5obm7Ob87Kysq/gUKYNJsqmqZjS4ktLaR0cBwXy5Lkch/Z2XlLNvue7N47crkP5PN5Dg4OGPVi4nAMlFKi6z0sy+J/YvSxfwNJoaxv4z2+pQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/03c7f880f1af3339f62ea2db1ea24bbf/a59e9/webpackinstall.webp 192w,
+/static/03c7f880f1af3339f62ea2db1ea24bbf/0ca9f/webpackinstall.webp 384w,
+/static/03c7f880f1af3339f62ea2db1ea24bbf/dc9b9/webpackinstall.webp 768w,
+/static/03c7f880f1af3339f62ea2db1ea24bbf/80c60/webpackinstall.webp 1000w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/03c7f880f1af3339f62ea2db1ea24bbf/3b721/webpackinstall.png 192w,
+/static/03c7f880f1af3339f62ea2db1ea24bbf/66595/webpackinstall.png 384w,
+/static/03c7f880f1af3339f62ea2db1ea24bbf/fe486/webpackinstall.png 768w,
+/static/03c7f880f1af3339f62ea2db1ea24bbf/1263b/webpackinstall.png 1000w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/03c7f880f1af3339f62ea2db1ea24bbf/fe486/webpackinstall.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/webpackinstall.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/webpackinstall.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<h2>Webpack config 파일 구조 분석을 통한 4가지 주요 속성 이해</h2>
+<h3>Entry</h3>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8a5211142153c55c734e966ef6034240/25327/webpackentry.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.8125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABk0lEQVQoz23SWY4aMRCAYY4SRgO9eHdtLtvd0BOY+x8pYQgwiSL9slwPnyxb3ul61XapyyVz3w9+P4S3o3sf7NvB7A/zj3dzb//s8GrnU2W4tHqqrUVeoX1GakHUQp2D2sRzIJN4jmQim0ijhcH8aWe8cL5qOf38WD8v5+3Ut/NSe3e8WVw9lMgFtEbSyJpYjafR4r3dZHGOPZRrwAq15qKgSrVGKoHEZyYuLIqkQKWUGrMM5oFNYCTNqIAaknhcRieHCQZDX+Fg8Pi13jYzjQ95w3OgbZFtKfUsdZPlWrlBwhgpBUqRUsRHlLJkl+B1sgcSoQ9aMFdkSdKdbA57TlJAY2JPklUji4XiMybKx/kbrp2YCRmAIQskwSwI95EgcYYCUCAzouYs6YUnfxMbt4yaSSx0h90nxsQpssdbJtDsYfZgAkzu+509j5Zqbg07Uo31FHSF0okbcAusLpfR8vB4s6d8YlyxL7h0bgQKUVwURxJYPZbJ0T/mL+x8CV685+DZOY5ejLv9KgdiM0+O/it/41+Ym4wKQLwQ0QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/8a5211142153c55c734e966ef6034240/a59e9/webpackentry.webp 192w,
+/static/8a5211142153c55c734e966ef6034240/0ca9f/webpackentry.webp 384w,
+/static/8a5211142153c55c734e966ef6034240/dc9b9/webpackentry.webp 768w,
+/static/8a5211142153c55c734e966ef6034240/ef8da/webpackentry.webp 837w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/8a5211142153c55c734e966ef6034240/3b721/webpackentry.png 192w,
+/static/8a5211142153c55c734e966ef6034240/66595/webpackentry.png 384w,
+/static/8a5211142153c55c734e966ef6034240/fe486/webpackentry.png 768w,
+/static/8a5211142153c55c734e966ef6034240/25327/webpackentry.png 837w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/8a5211142153c55c734e966ef6034240/fe486/webpackentry.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/webpackentry.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/webpackentry.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>웹팩을 실행할 대상 파일, 그 진입점과 경로 정의합니다.</p>
+<p>보통 웹 애플리케이션의 전반적인 구조와 내용이 들어있어 있는 메인 JS 파일을 지정합니다.</p>
+<h3>Output</h3>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/126712204e0546b8b2df47acb9cedb8f/25327/webpackourput.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.8125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjUlEQVQoz3XQW24bMQxAUS+lDmLPjKTRg6T4kOSxndrZ/5KKxEmKFClwfi8Jcmfb3fqtnW7AYz/F/ZSejuvzFJ4Ofn9wv579w/7L4a9dLI3x1tu59Z55w/6aa09iAZtLFgq7VH1hl6vP7HOdA07+w85HYbibnn+/bK+3y/U8rpdTG2Pla6AtomZWtJarZbbC5mOdAz3slkAuj6j3RA1bAzW0Rq0l1lQlAlc25kbVkFS0ZZDJf8Y+MYthNWLLKLkOF/nocQ60fG74n90Sq1JTakWsqFEfEXj2MAU8BpwCzp4eF87vE/+JOa5ywa2kXlATDUcvrpxyFM62RvFFEltA9aBLqN9iF5mEVYkYUd6AECqRIAkCIwiQIii+v/p77DP3TpfagQyqBBwrjViYCpfMkd64VNcCucLXqz7ikBkErPRBg7jldk62kQ3WTtIT24o6B/YJy49xrtDzGHBqNLBYieqjeNRIFkDnUA8LLRF/2Owzb1cyq2bYjNSwt8qGPFA3khOSAUiplkuFo/sW/wHn5Yv2pEOjZgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/126712204e0546b8b2df47acb9cedb8f/a59e9/webpackourput.webp 192w,
+/static/126712204e0546b8b2df47acb9cedb8f/0ca9f/webpackourput.webp 384w,
+/static/126712204e0546b8b2df47acb9cedb8f/dc9b9/webpackourput.webp 768w,
+/static/126712204e0546b8b2df47acb9cedb8f/ef8da/webpackourput.webp 837w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/126712204e0546b8b2df47acb9cedb8f/3b721/webpackourput.png 192w,
+/static/126712204e0546b8b2df47acb9cedb8f/66595/webpackourput.png 384w,
+/static/126712204e0546b8b2df47acb9cedb8f/fe486/webpackourput.png 768w,
+/static/126712204e0546b8b2df47acb9cedb8f/25327/webpackourput.png 837w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/126712204e0546b8b2df47acb9cedb8f/fe486/webpackourput.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/webpackourput.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/webpackourput.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>웹팩을 실행 후 결과물의 파일 경로 — filename과 path 설정합니다.</p>
+<h3>Loader</h3>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/dee332720a7c30eae17cdf50e7512802/25327/webpackloader.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.8125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABj0lEQVQoz32R62obMRCF/SgJxPFqV1pprpqRvC6OCaUlhLS0pT8Kff+3KFsHu4FQ+BjO/DicuWx8eRQ/STtlXm636eYuvsd0u71ycxfPYjODH5bmTbkKCBaGIrDWf0gIYcZxxiljSAQCQ6TdRJsx87KngzQUjyBT4alwvABr+/klvvwYv/8KP3+H52+TLRASD5E3sShWKtAL+JQtzlZyD6le2I16OMHT1/j0JX56Tg8fQZxDorNZqFLK9UP1go2tNV/Q25glomRRMLsfJcwWsk1oITU2DvNf81SUKrHuUbyQozmYibfCDdTFHWufsbG7dpfubHtteklWMprBlTwVg9IJliHJOOuYdIg6xFWHpGHVGlLlt2NzLHbs1s0Ias2Ni9FsU5RdXA/zFlnHviav5ro379pjYXQrXMk8gu5GHqb/mddmmCuTPHozNXIjV2paVMcsU5bzY95PRuUh2hArzQ2Sj6lm7RE9kUe0hB6Sbke+f2Vd83Jt2R9Bm9ZeoRaoBSugFlR4pa7QFdwf8Zz8BxM8jHdyUVLSAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/dee332720a7c30eae17cdf50e7512802/a59e9/webpackloader.webp 192w,
+/static/dee332720a7c30eae17cdf50e7512802/0ca9f/webpackloader.webp 384w,
+/static/dee332720a7c30eae17cdf50e7512802/dc9b9/webpackloader.webp 768w,
+/static/dee332720a7c30eae17cdf50e7512802/ef8da/webpackloader.webp 837w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/dee332720a7c30eae17cdf50e7512802/3b721/webpackloader.png 192w,
+/static/dee332720a7c30eae17cdf50e7512802/66595/webpackloader.png 384w,
+/static/dee332720a7c30eae17cdf50e7512802/fe486/webpackloader.png 768w,
+/static/dee332720a7c30eae17cdf50e7512802/25327/webpackloader.png 837w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/dee332720a7c30eae17cdf50e7512802/fe486/webpackloader.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/webpackloader.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/webpackloader.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>loader는 특정 파일을 해석하고 변환하는 작업 담당입니다.</p>
+<p>즉 HTML, CSS, 이미지나, font 같은 asset 파일들을 웹팩이 인식하고</p>
+<p>할 수 있도록 해주는 것을 loader가 맡아서 해줍니다.</p>
+<p>각 객체에는 적어도 2개의 속성을 입력합니다.</p>
+<p>test: 로더를 적용할 “파일 유형” (CSS, JS..등등)</p>
+<p>use: 로더 이름</p>
+<p>참고로, 다수의 로더를 적용해야 할 때는 적용 법칙이 오른쪽에서 -> 왼쪽 순인 관계입니다.</p>
+<p>(위의 예를 보자면, ‘sass-loader’, ‘css-loader’, ‘styles-loader’ 순으로 적용)</p>
+<h3>Plugins</h3>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ac58ecd6bc91d5e1c4164b1946487bd7/25327/webpackplugins.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.8125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVQoz53SS27CMBQF0GylIPJxEtvP7+dPEipoVXX/G6pIEQIaMah0Bh74yn7XrtL8qeWk5Ywy79tx1wz71a4e3g79a9UAafDqIGooI6iT6DiCpjFoN1I74E3TP6vagdpRO6sHg03PK1rxk8vOR9XoOWZFCUDoECyCJXAEwOGexbARBsE55XM6LfN0XErKMZcoMQ4ee3dlLAYFY7HpH8NBsPfMIS055iVP5ym/53TM3Uh193t/qg0Bh80wDUCF4/dUFHOYUvnI89cEql7VuMuoTU8gW2EQ9CjIRZWRxQYJKhQvSS9s3OuTFVky0ywxppw0RV0XIMlYMvY6M8atmSlOktWSd2vJN/6xcE9bbXej1Ib/vmrTc23o3kZ4/T30Pz9ZJIbc64OpUQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/ac58ecd6bc91d5e1c4164b1946487bd7/a59e9/webpackplugins.webp 192w,
+/static/ac58ecd6bc91d5e1c4164b1946487bd7/0ca9f/webpackplugins.webp 384w,
+/static/ac58ecd6bc91d5e1c4164b1946487bd7/dc9b9/webpackplugins.webp 768w,
+/static/ac58ecd6bc91d5e1c4164b1946487bd7/ef8da/webpackplugins.webp 837w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/ac58ecd6bc91d5e1c4164b1946487bd7/3b721/webpackplugins.png 192w,
+/static/ac58ecd6bc91d5e1c4164b1946487bd7/66595/webpackplugins.png 384w,
+/static/ac58ecd6bc91d5e1c4164b1946487bd7/fe486/webpackplugins.png 768w,
+/static/ac58ecd6bc91d5e1c4164b1946487bd7/25327/webpackplugins.png 837w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/ac58ecd6bc91d5e1c4164b1946487bd7/fe486/webpackplugins.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/webpackplugins.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/webpackplugins.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>웹팩 실행시 원하는 추가적인 기능을 추가 할 수 있는 옵션입니다.</p></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">제 블로그에 방문해주셔서 감사합니다. 😊</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/webpack/";window.___webpackCompilationHash="9f5a343bac024747731a";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-5364d16a56eba8b4496f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-da0f1354074b3fb451dc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-31b1b037074fc603b07d.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c7dc62ecd5c83f0034b0.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-5364d16a56eba8b4496f.js" async=""></script><script src="/framework-c57a9454c0e3bef16c3b.js" async=""></script><script src="/webpack-runtime-ed14da73140b30fdea27.js" async=""></script></body></html>
