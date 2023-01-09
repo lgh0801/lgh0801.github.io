@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.22.0"/><meta data-react-helmet="true" name="description" content="OX퀴즈, 음식 월드컵 구현하기"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="React로 간단한 게임 만들어보기"/><meta data-react-helmet="true" property="og:description" content="OX퀴즈, 음식 월드컵 구현하기"/><meta data-react-helmet="true" property="og:image" content="/static/cba0b89d2bf2d96a1ed26edb5849f804/reactthumbnail.png"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="React로 간단한 게임 만들어보기"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="React로 간단한 게임 만들어보기"/><meta data-react-helmet="true" name="twitter:description" content="OX퀴즈, 음식 월드컵 구현하기"/><meta data-react-helmet="true" name="twitter:image" content="/static/cba0b89d2bf2d96a1ed26edb5849f804/reactthumbnail.png"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><style data-href="/styles.710ba525502dd431a17c.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><link rel="canonical" href="https://lgh0801.github.io/reactGame/" data-baseprotocol="https:" data-basehost="lgh0801.github.io"/><title data-react-helmet="true">React로 간단한 게임 만들어보기</title><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1strnqo0"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1200px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;630&#x27; width=&#x27;1200&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVQoz2NQwgWUlZWUlZVVVEAMJWWsShhw6VVUkFeQk1WUk1WQk1VSUCBas7KyooKChrGZgU+IhrGZoW+ouoGxIki/MlGaFWSkDXyCTcIT3LrmmkYk6bn5yEtLgt2PXzPIWnlNcyvLtGLnxkk2+TVOjZMsUgo0TMxBlqPqx6ZZXs7QL8w0KsWpcZJjba9jbZ9pVIqBd7CinBwhzTAjzBOybfJqHKq6bQvqzKJTlRQViA0wBTlZHQdX45AYq8xS45A4LWt7BVkZIvwMjShFFXUNTVMLBWkpTTNLZTV1JUVFUuJZUVFBTlZZWUVRVharTnyaQbGqrAJNajgAAIe0an5q22AbAAAAAElFTkSuQmCC" alt=""/><picture><source type="image/webp" data-srcset="/static/cba0b89d2bf2d96a1ed26edb5849f804/2fedb/reactthumbnail.webp 300w,/static/cba0b89d2bf2d96a1ed26edb5849f804/4fcbd/reactthumbnail.webp 600w,/static/cba0b89d2bf2d96a1ed26edb5849f804/0d4d1/reactthumbnail.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" data-src="/static/cba0b89d2bf2d96a1ed26edb5849f804/07887/reactthumbnail.png" data-srcset="/static/cba0b89d2bf2d96a1ed26edb5849f804/387ef/reactthumbnail.png 300w,/static/cba0b89d2bf2d96a1ed26edb5849f804/22925/reactthumbnail.png 600w,/static/cba0b89d2bf2d96a1ed26edb5849f804/07887/reactthumbnail.png 1200w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/cba0b89d2bf2d96a1ed26edb5849f804/2fedb/reactthumbnail.webp 300w,/static/cba0b89d2bf2d96a1ed26edb5849f804/4fcbd/reactthumbnail.webp 600w,/static/cba0b89d2bf2d96a1ed26edb5849f804/0d4d1/reactthumbnail.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" src="/static/cba0b89d2bf2d96a1ed26edb5849f804/07887/reactthumbnail.png" srcSet="/static/cba0b89d2bf2d96a1ed26edb5849f804/387ef/reactthumbnail.png 300w,/static/cba0b89d2bf2d96a1ed26edb5849f804/22925/reactthumbnail.png 600w,/static/cba0b89d2bf2d96a1ed26edb5849f804/07887/reactthumbnail.png 1200w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">React로 간단한 게임 만들어보기</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>React / Styled-Components</div><div>2022.09.14.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><h2>시작 화면</h2>
+<p>예전부터 ox 퀴즈, 이상형월드컵 같은 게임을 react로 이용하여 만들어봐야지 생각만 하다가</p>
+<p>오늘 드디어 작업을 실천하게 되었습니다.</p>
+<p>우선 처음 시작화면을 구현하였습니다.</p>
+<p>게임을 둘 중의 하나 고를 수 있는 화면을 styled-components를 사용하여 구현했습니다.</p>
+<h3>구현 화면</h3>
+<p>왼쪽 선택시 OX퀴즈 / 오른쪽 선택시 음식 월드컵</p>
+<h2><img src="/aa9d44b213011d42260406f07786f913/gamemain.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gamemain.PNG"></h2>
+<h3>소스 코드 (App.js)</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> styled<span class="token punctuation">,</span> <span class="token punctuation">{</span> createGlobalStyle <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'styled-components'</span>
+<span class="token keyword">import</span> GameWorldcup <span class="token keyword">from</span> <span class="token string">'./components/Game/Game'</span>
+<span class="token keyword">import</span> GameOX <span class="token keyword">from</span> <span class="token string">'./components/Game/Game2'</span>
+
+<span class="token keyword">const</span> GlobalStyle <span class="token operator">=</span> createGlobalStyle<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token keyword">const</span> Home <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  display: flex;
+  justify-content: center;
+  flex: 1;
+</span><span class="token template-punctuation string">`</span></span>
+<span class="token comment">// flex: 1 => flex item에 적용한 flex 속성은 flex item의 크기와 관련된 속성이며,</span>
+<span class="token comment">// 다음과 같이 flex-grow 속성과 flex-shrink 속성, flex-basis 속성을 축약한 표현이다.</span>
+
+<span class="token keyword">const</span> ChooseGame <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  width: 100%;
+  height: 1160px;
+  border: 1px solid black;
+  text-align: center;
+  margin: 25px;
+  font-size: 80px;
+  background-image: url(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token parameter">props</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>bgimg<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>game<span class="token punctuation">,</span> setGame<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>GlobalStyle<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>GlobalStyle<span class="token operator">></span>
+      <span class="token punctuation">{</span>game <span class="token operator">===</span> <span class="token string">''</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>Home<span class="token operator">></span>
+          <span class="token operator">&lt;</span>ChooseGame
+            bgimg<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./img/quiz.png'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+            onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token function">setGame</span><span class="token punctuation">(</span><span class="token string">'gameOX'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token operator">></span>
+            상식 <span class="token constant">OX</span>퀴즈
+          <span class="token operator">&lt;</span><span class="token operator">/</span>ChooseGame<span class="token operator">></span>
+          <span class="token operator">&lt;</span>ChooseGame
+            bgimg<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./img/worldcup.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+            onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token function">setGame</span><span class="token punctuation">(</span><span class="token string">'gameWorldcup'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token operator">></span>
+            음식 월드컵
+          <span class="token operator">&lt;</span><span class="token operator">/</span>ChooseGame<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Home<span class="token operator">></span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+      <span class="token punctuation">{</span>game <span class="token operator">===</span> <span class="token string">'gameOX'</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>GameOX<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>GameOX<span class="token operator">></span><span class="token punctuation">}</span>
+      <span class="token punctuation">{</span>game <span class="token operator">===</span> <span class="token string">'gameWorldcup'</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>GameWorldcup<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>GameWorldcup<span class="token operator">></span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App</code></pre></div>
+<p>styled-components를 사용하여 글로벌 스타일을 주고</p>
+<p>background-image 경로는 props로 받아왔습니다.</p>
+<p>클릭시 setGame을 사용하여 각각 game값을 저장하여 해당 화면이 보이게 구현했습니다.</p>
+<h2>OX퀴즈</h2>
+<p>OX 퀴즈는 총 6문제이며 문제를 풀 때마다 정답인지 오답인지를 알려주고</p>
+<p>마지막에는 몇 문제를 맞혔는지 알려주고 메인 화면으로 이동하도록 구현하였습니다.</p>
+<h3>구현 화면</h3>
+<h2><img src="/222a09154e34ddd5dd559718a59550f8/gameox1.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gameox1.PNG"></h2>
+<h2><img src="/c74c7c14123dd4a9e08a52703743809f/gameox2.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gameox2.PNG"></h2>
+<h2><img src="/df37ab9cfd477af0baa6dee1184d6df3/gameox3.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gameox3.PNG"></h2>
+<h3>소스 코드</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> FlexBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./style'</span>
+
+<span class="token keyword">const</span> quiz <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">quiz</span><span class="token operator">:</span> <span class="token string">'병아리도 배꼽이 있다.'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">answer</span><span class="token operator">:</span> <span class="token string">'O'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">quiz</span><span class="token operator">:</span> <span class="token string">'셰익스피어 희곡 햄릿의 주인공인 햄릿은 네덜란드 사람이다.'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">answer</span><span class="token operator">:</span> <span class="token string">'X'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">quiz</span><span class="token operator">:</span> <span class="token string">'북두칠성은 시계의 반대 방향으로 회전한다.'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">answer</span><span class="token operator">:</span> <span class="token string">'O'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">quiz</span><span class="token operator">:</span> <span class="token string">'열대 지방에 자라는 나무에는 나이테가 없다.'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">answer</span><span class="token operator">:</span> <span class="token string">'O'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">quiz</span><span class="token operator">:</span> <span class="token string">'벼룩은 암컷과 수컷 가운데 수컷의 몸집이 더 크다.'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">answer</span><span class="token operator">:</span> <span class="token string">'X'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">quiz</span><span class="token operator">:</span> <span class="token string">'세계적으로 가장 많이 발생하는 병은 말라리아 (학질) 이다.'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">answer</span><span class="token operator">:</span> <span class="token string">'X'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> imagePath <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../img/o.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'O'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../img/x.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'X'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Game</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>displayquiz<span class="token punctuation">,</span> setDisplayquiz<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>displayimg<span class="token punctuation">,</span> setDisplayimg<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    quiz<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">0.5</span><span class="token punctuation">)</span> <span class="token comment">//랜덤으로 섞어주기</span>
+    <span class="token function">setDisplayquiz</span><span class="token punctuation">(</span>quiz<span class="token punctuation">[</span>quiz<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token function">setDisplayimg</span><span class="token punctuation">(</span><span class="token punctuation">[</span>imagePath<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> imagePath<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token parameter">ox</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">//내가 선택한 정답과 display정답을 비교</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>ox<span class="token punctuation">.</span>name <span class="token operator">===</span> displayquiz<span class="token punctuation">.</span>answer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'정답입니다.'</span><span class="token punctuation">)</span>
+      <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      quiz<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token comment">//마지막이 정답일 경우</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>quiz<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>
+          <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">문제를 다 풀었습니다. 총 6문제 중 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 문제 맞추셨습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'틀렸습니다.'</span><span class="token punctuation">)</span>
+      quiz<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token comment">//마지막이 오답일 경우</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>quiz<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">문제를 다 풀었습니다. 총 6문제 중 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 문제 맞추셨습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">setDisplayquiz</span><span class="token punctuation">(</span>quiz<span class="token punctuation">[</span>quiz<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>FlexBox<span class="token operator">></span>
+      <span class="token punctuation">{</span>displayquiz <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>h1 className<span class="token operator">=</span><span class="token string">"title"</span> style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'41px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token punctuation">{</span>displayquiz<span class="token punctuation">.</span>quiz<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token punctuation">{</span>displayimg<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">d</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"flex-1"</span> key<span class="token operator">=</span><span class="token punctuation">{</span>d<span class="token punctuation">.</span>src<span class="token punctuation">}</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token function">clickHandler</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>img className<span class="token operator">=</span><span class="token string">"image"</span> src<span class="token operator">=</span><span class="token punctuation">{</span>d<span class="token punctuation">.</span>src<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>img<span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>FlexBox<span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Game</code></pre></div>
+<p>quiz 배열에 문제정보와 정답 / imagePath에 OX 이미지 정보를 넣어놨습니다.</p>
+<p>랜덤으로 섞어놓은 퀴즈 문제들을 마지막 값을 하나씩 꺼내어 displayquiz에 값을 저장합니다.</p>
+<p>ox 이미지 클릭 시 해당 정보와 문제정답을 비교하여 진행합니다.</p>
+<p>정답일 때만 카운터 작업을 진행합니다.</p>
+<p>문제를 풀 때마다 quiz pop으로 제거하고 마지막 값 꺼내서 displayquiz에 저장을 반복합니다.</p>
+<p>quiz.length가 0이면 더는 문제가 없으므로 몇 문제를 맞췄는지 알려주고</p>
+<p>새로 고침을 실행하여 메인화면으로 다시 돌아갑니다.</p>
+<h2>음식 월드컵</h2>
+<p>총 4개에 음식 중 마음에 드는 음식을 골라서 우승시키는 게임입니다.</p>
+<h3>구현 화면</h3>
+<h2><img src="/9a28912d764cf420313b9f5ad34106a5/gameworldcup1.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gameworldcup1.PNG"></h2>
+<h2><img src="/b6dcea0c8c60476d5deecb333e0b29d7/gameworldcup2.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gameworldcup2.PNG"></h2>
+<h2><img src="/8fa10828130344167c93f7aa830d77ad/gameworldcup3.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/gameworldcup3.PNG"></h2>
+<h3>소스 코드</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> FlexBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./style'</span>
+
+<span class="token keyword">const</span> items <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'햄버거'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../img/burger.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'볶음밥'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../img/fried-rice.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'파스타'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../img/pasta.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'라면'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../img/ramen.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Game</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>foods<span class="token punctuation">,</span> setFoods<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>display<span class="token punctuation">,</span> setDisplay<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>winners<span class="token punctuation">,</span> setWinners<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    items<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">0.5</span><span class="token punctuation">)</span>
+    <span class="token function">setFoods</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span>
+    <span class="token function">setDisplay</span><span class="token punctuation">(</span><span class="token punctuation">[</span>items<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> items<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token parameter">food</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>foods<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>winners<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">setDisplay</span><span class="token punctuation">(</span><span class="token punctuation">[</span>food<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">내가 가장 좋아하는 음식은 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>food<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">입니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+          window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1500</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> updateFood <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>winners<span class="token punctuation">,</span> food<span class="token punctuation">]</span>
+        <span class="token function">setFoods</span><span class="token punctuation">(</span>updateFood<span class="token punctuation">)</span>
+        <span class="token function">setDisplay</span><span class="token punctuation">(</span><span class="token punctuation">[</span>updateFood<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> updateFood<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">//승리한 음식들</span>
+        <span class="token function">setWinners</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">//winners를 초기화</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>foods<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setWinners</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>winners<span class="token punctuation">,</span> food<span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token function">setDisplay</span><span class="token punctuation">(</span><span class="token punctuation">[</span>foods<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> foods<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token function">setFoods</span><span class="token punctuation">(</span>foods<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>FlexBox<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h1 className<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>음식 월드컵<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+      <span class="token punctuation">{</span>display<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">d</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"flex-1"</span> key<span class="token operator">=</span><span class="token punctuation">{</span>d<span class="token punctuation">.</span>name<span class="token punctuation">}</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token function">clickHandler</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>img className<span class="token operator">=</span><span class="token string">"image"</span> src<span class="token operator">=</span><span class="token punctuation">{</span>d<span class="token punctuation">.</span>src<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>img<span class="token operator">></span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"name"</span><span class="token operator">></span><span class="token punctuation">{</span>d<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>FlexBox<span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Game</code></pre></div>
+<p>items 배열에 음식 이름과 이미지 경로를 넣어놨습니다.</p>
+<p>랜덤으로 섞은 음식들을 foods에 저장하고</p>
+<p>화면에 보이는 display에는 첫 번째, 두번째 배열에 정보를 담았습니다.</p>
+<p>이미지 클릭 시 foods 개수가 2보다 작거나 같은 경우와 2보다 클 경우를 기준으로 나누었습니다.</p>
+<p>2보다 클 경우는 자기가 골라서 올라간 음식을 winners에 넣어주고</p>
+<p>display에 세 번째, 네번째 배열에 정보를 넣어줍니다.</p>
+<p>그리고 세 번째, 네번째 배열을 자르고 foods에 넣어줍니다.</p>
+<p>다음 음식을 골라서 2보다 작거나 같은 경우를 이제 타면 승자끼리 비교해서</p>
+<p>최애 음식이 뽑히면 시간차를 두어 알림 문이 나오고 새로 고침을 실행하여 메인화면으로 돌아갑니다.</p>
+<h3>소스 코드 (style.js)</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> styled <span class="token keyword">from</span> <span class="token string">'styled-components'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> FlexBox <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  .title {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: white;
+    padding: 0px 30px;
+    padding-bottom: 10px;
+  }
+  .flex-1 {
+    flex: 1;
+    min-width: 500px;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .image:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  .name {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    bottom: 10%;
+    font-size: 80px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+</span><span class="token template-punctuation string">`</span></span></code></pre></div></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">제 블로그에 방문해주셔서 감사합니다. 😊</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/reactGame/";window.___webpackCompilationHash="9f5a343bac024747731a";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-5364d16a56eba8b4496f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-da0f1354074b3fb451dc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-31b1b037074fc603b07d.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c7dc62ecd5c83f0034b0.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-5364d16a56eba8b4496f.js" async=""></script><script src="/framework-c57a9454c0e3bef16c3b.js" async=""></script><script src="/webpack-runtime-ed14da73140b30fdea27.js" async=""></script></body></html>
