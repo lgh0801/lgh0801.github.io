@@ -1,7 +1,7 @@
 ---
 date: '2022-05-21'
 title: 'React-Styled Component'
-categories: ['React', 'CSS']
+categories: ['React', 'Styled-Components', 'CSS']
 summary: 'Styled-Components는 무엇인가?'
 thumbnail: './reactthumbnail.png'
 ---
