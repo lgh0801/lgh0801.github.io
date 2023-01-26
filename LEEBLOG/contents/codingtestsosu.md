@@ -1,7 +1,7 @@
 ---
 date: '2022-05-02'
 title: 'k진수에서 소수 개수 구하기[Kakao]'
-categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
+categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '변환된 수 안에 아래 조건에 맞는 소수가 몇개인가'
 thumbnail: './codingtestthumbnail.png'
 ---

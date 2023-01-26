@@ -1,7 +1,7 @@
 ---
 date: '2022-09-28'
 title: 'Cookie vs Session vs Web Storage'
-categories: ['HTTP']
+categories: ['Network']
 summary: 'Cookie/Session/Web Storage 비교하기'
 thumbnail: './fetch&axiosthumbnail.png'
 ---

@@ -1,7 +1,7 @@
 ---
 date: '2022-03-08'
 title: '키패드 누르기[Kakao]'
-categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
+categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '사용한 엄지손가락 순서대로 문자열 나타내기'
 thumbnail: './codingtestthumbnail.png'
 ---

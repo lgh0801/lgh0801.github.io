@@ -1,7 +1,7 @@
 ---
 date: '2022-03-02'
 title: '신규 아이디 추천[Kakao]'
-categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
+categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '신규 유저가 입력한 아이디를 규칙에 맞는지 검사하기'
 thumbnail: './codingtestthumbnail.png'
 ---

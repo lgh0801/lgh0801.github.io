@@ -1,7 +1,7 @@
 ---
 date: '2022-05-25'
 title: '크레인 인형뽑기 게임[Kakao]'
-categories: ['Programmers', 'CodingTest', 'Kakao', 'Javascript']
+categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '사라진 인형의 개수를 구해보자'
 thumbnail: './codingtestthumbnail.png'
 ---
