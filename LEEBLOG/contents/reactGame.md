@@ -1,5 +1,5 @@
 ---
-date: '2022-09-14'
+date: '2022-09-19'
 title: 'React로 간단한 게임 만들어보기'
 categories: ['React', 'Styled-Components']
 summary: 'OX퀴즈, 음식 월드컵 구현하기'

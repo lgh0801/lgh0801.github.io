@@ -1,5 +1,5 @@
 ---
-date: '2022-08-18'
+date: '2022-09-28'
 title: 'REST/REST API/RESTful'
 categories: ['Network']
 summary: 'REST 개념 설명'
@@ -74,8 +74,6 @@ RESTful 하지 못한 시스템이라고 할 수 있습니다.
 
 ## 마치면서...
 
-저는 예전에는 RESTful이 무엇인지 알고는 있었으나 신경을 별로 쓰지 않고
+앞으로는 개발할 때 REST API 규칙들을 최대한 지켜서
 
-get, post만 사용하고 URI 규칙을 신경을 쓰지 않았었습니다.
-
-앞으로는 개발을 할 때 REST API 규칙들을 최대한 지키려고 노력해야 할 것 같습니다.
+RESTful하게 개발해야겠습니다.

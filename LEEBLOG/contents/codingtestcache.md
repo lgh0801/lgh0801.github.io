@@ -1,5 +1,5 @@
 ---
-date: '2022-09-19'
+date: '2022-09-14'
 title: '캐시[Kakao]'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '캐시 크기에 따른 시간측정'
