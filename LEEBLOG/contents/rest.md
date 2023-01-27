@@ -1,5 +1,5 @@
 ---
-date: '2022-09-28'
+date: '2022-09-19'
 title: 'REST/REST API/RESTful'
 categories: ['Network']
 summary: 'REST 개념 설명'
