@@ -38,11 +38,15 @@ outerFunc() // 10
 
 자신이 속한 렉시컬 스코프(전역, 함수 outerFunc, 자신의 스코프)를 참조할 수 있습니다.
 
-1. innerFunc 함수 스코프(함수 자신의 스코프를 가리키는 활성 객체) 내에서
-   변수 x를 검색하면 검색이 실패합니다.
-2. innerFunc 함수를 포함하는 외부 함수 outerFunc의 스코프
-   (함수 outerFunc의 스코프를 가리키는 함수 outerFunc의 활성 객체)에서 변수 x를 검색하면
-   검색이 성공합니다.
+innerFunc 함수 스코프(함수 자신의 스코프를 가리키는 활성 객체) 내에서
+
+변수 x를 검색하면 검색이 실패합니다.
+
+innerFunc 함수를 포함하는 외부 함수 outerFunc의 스코프
+
+(함수 outerFunc의 스코프를 가리키는 함수 outerFunc의 활성 객체)에서
+
+변수 x를 검색하면 검색이 성공합니다.
 
 이번에는 내부함수 innerFunc를 함수 outerFunc 내에서 호출하는 것이 아니라 반환 예제를 보겠습니다.
 
