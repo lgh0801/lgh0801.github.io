@@ -1,5 +1,5 @@
 ---
-date: '2022-04-02'
+date: '2022-04-04'
 title: 'Typescript란?'
 categories: ['Typescript']
 summary: 'Typescript가 무엇인가'

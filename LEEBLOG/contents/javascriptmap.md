@@ -1,5 +1,5 @@
 ---
-date: '2022-03-01'
+date: '2022-03-02'
 title: 'Javascript Map 메소드'
 categories: ['Javascript']
 summary: 'Javascript Map 메소드 사용하기'

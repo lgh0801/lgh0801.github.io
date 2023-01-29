@@ -1,5 +1,5 @@
 ---
-date: '2022-03-07'
+date: '2022-04-05'
 title: '카펫의 가로세로 길이'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '격자 개수에 따라 카펫 가로세로 길이 구하기'

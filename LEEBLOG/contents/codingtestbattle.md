@@ -1,5 +1,5 @@
 ---
-date: '2022-08-10'
+date: '2022-08-17'
 title: '예상 대진표'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '참가자들은 몇 번쨰 라운드에서 만나는가'

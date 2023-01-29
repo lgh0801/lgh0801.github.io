@@ -1,5 +1,5 @@
 ---
-date: '2022-03-08'
+date: '2022-04-01'
 title: '키패드 누르기[Kakao]'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '사용한 엄지손가락 순서대로 문자열 나타내기'

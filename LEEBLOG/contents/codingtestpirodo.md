@@ -1,5 +1,5 @@
 ---
-date: '2022-03-06'
+date: '2022-04-02'
 title: '던전 피로도'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '유저가 탐험할수 있는 최대 던전 수 구하기'

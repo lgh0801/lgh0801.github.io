@@ -1,5 +1,5 @@
 ---
-date: '2022-07-12'
+date: '2022-07-14'
 title: '성격 유형 검사하기[Kakao]'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '문제에 알맞은 성격유형을 찾아보자'

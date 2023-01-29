@@ -1,5 +1,5 @@
 ---
-date: '2022-03-03'
+date: '2022-03-08'
 title: '폰켓몬'
 categories: ['Programmers', 'CodingTest', 'Javascript']
 summary: '폰켓몬 종류 번호의 개수를 구하기'

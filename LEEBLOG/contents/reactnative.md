@@ -1,5 +1,5 @@
 ---
-date: '2022-09-19'
+date: '2022-09-23'
 title: 'ReactNative 기초/CodeChallenge'
 categories: ['React Native']
 summary: 'ReactNatvie 기초강의 수강 후 Code Challenge'
