@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.22.0"/><meta data-react-helmet="true" name="description" content="프로토타입의 개념"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="프로토타입(prototype)"/><meta data-react-helmet="true" property="og:description" content="프로토타입의 개념"/><meta data-react-helmet="true" property="og:image" content="/static/e9a85b5a3a7f83d86a85a4c348938bd5/jsthumbnail.png"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="프로토타입(prototype)"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="프로토타입(prototype)"/><meta data-react-helmet="true" name="twitter:description" content="프로토타입의 개념"/><meta data-react-helmet="true" name="twitter:image" content="/static/e9a85b5a3a7f83d86a85a4c348938bd5/jsthumbnail.png"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><style data-href="/styles.710ba525502dd431a17c.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><link rel="canonical" href="https://lgh0801.github.io/javascriptprototype/" data-baseprotocol="https:" data-basehost="lgh0801.github.io"/><title data-react-helmet="true">프로토타입(prototype)</title><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1strnqo0"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1800px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;1012&#x27; width=&#x27;1800&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtUlEQVQoz2P4cCsAF3p/M+Dbg8C/z4I+3Ql8fzPg673Af8+C/j4L+nIXxP1wK4ABn877gSd3eC6Y4vT4vN/PR0FXDnpP73ac0+9096Tv13sg/Tg1v7nu//9FcGeDnbS8zvUjPjeP+TjYGWlp66mo6rq7Gj865/f5Dm7Nb8Ga+1vsVdV0H53znTPBUVZB59gWz5M7PGdPcHx3I+DjbUKa+1rslVV175/xXTvfVU5Bp6bE5sEZ3/+vgiGhgNvZ16CaVdX1rhzyfn8rICvFUl5RV99Av73W7u113DZ/uhPw+W7gv+cgzWoaehf3e/97Efz1YeCmxa7RYeayCjpTOh1+PQ7Covnj7YBnF/2Ob/P8/y6kr9leVU3v+hGf83u9ti93+/8x5M1Nfwtzw+RYi6/3A9E1v7sR8OtxUE+TvbqmXl2pjb2dkZ2t0dvr/jmpVvKKOpWFNsXZ1nKKuh11dlhsfn8z4MvdwOuHfXLTrCzMDf19THeudP/1KOj2cZ/KQmtbGyM7G6PaUpunF/w+3w1kwJo8vt4P/HI38MVl/3c3A74/gCavbw8CX13xf3nF//uDwM/gRAYAl1aM8GLqCagAAAAASUVORK5CYII=" alt=""/><picture><source type="image/webp" data-srcset="/static/e9a85b5a3a7f83d86a85a4c348938bd5/06689/jsthumbnail.webp 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/eca74/jsthumbnail.webp 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/23de5/jsthumbnail.webp 1800w" sizes="(min-width: 1800px) 1800px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1800px) 1800px, 100vw" decoding="async" loading="lazy" data-src="/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png" data-srcset="/static/e9a85b5a3a7f83d86a85a4c348938bd5/602a4/jsthumbnail.png 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/4c0f7/jsthumbnail.png 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png 1800w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/e9a85b5a3a7f83d86a85a4c348938bd5/06689/jsthumbnail.webp 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/eca74/jsthumbnail.webp 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/23de5/jsthumbnail.webp 1800w" sizes="(min-width: 1800px) 1800px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1800px) 1800px, 100vw" decoding="async" loading="lazy" src="/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png" srcSet="/static/e9a85b5a3a7f83d86a85a4c348938bd5/602a4/jsthumbnail.png 450w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/4c0f7/jsthumbnail.png 900w,/static/e9a85b5a3a7f83d86a85a4c348938bd5/ddad7/jsthumbnail.png 1800w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">프로토타입(prototype)</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>Javascript</div><div>2022.08.10.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><h2>프로토타입(prototype)</h2>
+<p>자바스크립트의 모든 객체(obj)는 자기 부모 역할을 하는 프로토타입이라는</p>
+<p>객체를 가지고 있으며, 객체 지향의 상속과 같이 모든 객체는</p>
+<p>그 객체의 부모 객체인 프로토타입으로부터 프로퍼티와 메서드를 상속받습니다.</p>
+<p>모든 객체는 최소한 하나 이상의 다른 객체로부터 상속받으며,</p>
+<p>이때 상속되는 정보를 제공하는 객체를 프로토타입이라고 합니다.</p>
+<p>arr.push()를 예로 들어보면</p>
+<p>배열 arr는 자식이고 그 안에 Array라는 부모객체가 있고 Array 안에</p>
+<p>prototype 객체가 있고 그 안에 .push() 같은 메서드가 있는 것입니다.</p>
+<h2>일반적인 객체 생성</h2>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//생성자 함수</span>
+<span class="token keyword">function</span> <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token parameter">width<span class="token punctuation">,</span> height</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">=</span> width
+  <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> height
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">getArea</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>height
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//두 개의 정사각형 인스턴스 생성</span>
+<span class="token keyword">const</span> rec1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> rec2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rec1<span class="token punctuation">.</span>getArea <span class="token operator">===</span> rec2<span class="token punctuation">.</span>getArea<span class="token punctuation">)</span> <span class="token comment">// false</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rec1<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//25</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rec2<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//36</span></code></pre></div>
+<p>위 코드는 생성자 함수 Rectangle을 이용해 동일한 구조를 갖는 2개의 객체를 생성하는 코드입니다.</p>
+<p>이러한 방식은 여러 객체를 생성하는데 유리하지만 문제가 있습니다.</p>
+<p>Rectangle객체의 width, height속성은 일반적으로 인스턴스마다 서로 다릅니다.</p>
+<p>그러나 getArea메서드는 모든 객체에서 동일한 내용을 수행합니다.</p>
+<p>하지만 위의 코드에서는 getArea를 포함한 모든 속성이 독립적으로 유지됩니다.</p>
+<p>쉽게말하면 Rectangle 생성자 함수 아래 rec1/rec2가 독립적으로 존재하는데</p>
+<p>getArea()는 중복이라서 불필요한 메모리의 낭비가 됩니다.</p>
+<p>이런 문제를 해결할 수 있는것이 프로토타입을 이용한 객체 생성입니다.</p>
+<h2>프로토타입을 이용한 객체 생성</h2>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//생성자 함수</span>
+<span class="token keyword">function</span> <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token parameter">width<span class="token punctuation">,</span> height</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">=</span> width
+  <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> height
+<span class="token punctuation">}</span>
+
+<span class="token comment">//공유해서 사용할 수 있도록 프로토타입에 추가</span>
+<span class="token comment">//프로토타입은 생성자 함수의 prototype에 바인딩되어있다.</span>
+<span class="token class-name">Rectangle</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getArea</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>height
+  <span class="token comment">//this는 함수를 호출하는 시점에 결정된다.</span>
+  <span class="token comment">//이제 왜 this가 이러한 동작을 하는지 어느정도 납득이 가능할것이다.</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//두 개의 정사각형 인스턴스 생성</span>
+<span class="token keyword">const</span> rec1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> rec2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+
+<span class="token comment">//생성자 함수가 생성한 모든 인스턴스는 프로토타입을 부모 객체로 상속하며 생성된다.</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rec1<span class="token punctuation">.</span>getArea <span class="token operator">===</span> rec2<span class="token punctuation">.</span>getArea<span class="token punctuation">)</span> <span class="token comment">// true</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rec1<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//25</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rec2<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//36</span></code></pre></div>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/af14eec00617822728f48ef38dc01208/0ae55/prototype.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.97916666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABPUlEQVQoz31RwWrCQBTMF6pRg55EwYiIP6I/IP6CiEIgCYoevAlaW7FBG9tDCynSqGlt0cRkd0pWTXJyYHlv2dlh3jzuo17HIpHAiyhCLxahl0rQMhmsCgU4mw2W+TyWuRzW1Sr0chnrSgWLWAxGswkflBBQSnED9zMeYyfLMIdDvLZaMCQJe1XFVlVxNk1sZRnfgwE+ez28tdvYj0bYShIOs9lFkNLgMEFE4PqEyJ16XtgD8AiJ0kFdl3FYvfYcs+x/pBT3QGwb5HQCOZ/v8ribVeI42Pmj+iMrCixFYfWr08HvfB649J3s+/0LT5ZhqSrjmd0uDpNJKOhaFluAJgh4SCYxFQQ8pdN4jsdhNBqBA+94xEoULzyexzSbxWMqBY3n8V6rhYI0ko8N4M/zWKZBXtf36EYZjxBEQ/gHlwn0PcShGXcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/af14eec00617822728f48ef38dc01208/a59e9/prototype.webp 192w,
+/static/af14eec00617822728f48ef38dc01208/0ca9f/prototype.webp 384w,
+/static/af14eec00617822728f48ef38dc01208/dc9b9/prototype.webp 768w,
+/static/af14eec00617822728f48ef38dc01208/b223d/prototype.webp 1121w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/af14eec00617822728f48ef38dc01208/3b721/prototype.png 192w,
+/static/af14eec00617822728f48ef38dc01208/66595/prototype.png 384w,
+/static/af14eec00617822728f48ef38dc01208/fe486/prototype.png 768w,
+/static/af14eec00617822728f48ef38dc01208/0ae55/prototype.png 1121w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/af14eec00617822728f48ef38dc01208/fe486/prototype.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/prototype.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/prototype.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>prototype속성은 함수가 정의되면 자동으로 생성됩니다.</p>
+<p>생성자 함수가 생성한 모든 인스턴스는 자신의 프로토타입(__proto__)역할을 하는</p>
+<p>생성자함수.prototype의 모든 프로퍼티와 메소드를 상속받습니다.</p>
+<p>이제 getArea 메소드는 단 하나만 생성되어 Rectangle.prototype에 할당되어있고</p>
+<p>Rectangle 생성자 함수가 생성하는 모든 인스턴스는 getArea 메소드를 사용할 수 있습니다.</p>
+<h2>프로토타입 객체</h2>
+<p>프로토타입 객체란 객체 간 상속을 구현하기 위해 사용됩니다.</p>
+<p>프로토타입은 어떤 객체의 부모 역할을 하는 객체로서</p>
+<p>다른 객체에 공유 프로퍼티를 제공합니다.</p>
+<h2><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/31dbf2cd7f4c474324b4e5f88b21ea7b/91af2/prototype2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.833333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABaElEQVQoz42STUsCQRjH/Th6KLp1kaCDSNA1iFgFz36EDhK1eezgHvsQnkMisJTKyl5os6B3C0rWfaklnd39haOW5iEHHmbmzzO/ef7PTIgxRuD7jJsXes/nOZmZ4WxuDn1xketEAn1hgdN4nONolOt0Gs9x0JNJzufnqaVS1BSFq6UldEXhopMbi9Hc2ZHQkFUqcbu8zIOqcpvNcrm2hr6ywsP6OneZDC+bmwjL4mljg8dslmdNQ19d5VJVudc0nnM5medUq13gYMkCMFyXD88bsuK57q8twP76wnIc/D92gyAgJBdC4AsB/V4FgdRk/IH/XO77WK3WMFQCO4cHhH7093IWArtSwSwWMff2sMpl3ra3qW9tYXS03V3ajUbX8iBkJHoVC9OUj3QQiXA4McHR9DTV2VmOJiepTE2xHw5jFAqjPRz5Br0K/XYb0WxKsG/bWPU6rzc3ct3RhGHgfX6ODxxqwz+537JGi7d1mUJYAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/31dbf2cd7f4c474324b4e5f88b21ea7b/a59e9/prototype2.webp 192w,
+/static/31dbf2cd7f4c474324b4e5f88b21ea7b/0ca9f/prototype2.webp 384w,
+/static/31dbf2cd7f4c474324b4e5f88b21ea7b/dc9b9/prototype2.webp 768w,
+/static/31dbf2cd7f4c474324b4e5f88b21ea7b/9b20f/prototype2.webp 904w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/31dbf2cd7f4c474324b4e5f88b21ea7b/3b721/prototype2.png 192w,
+/static/31dbf2cd7f4c474324b4e5f88b21ea7b/66595/prototype2.png 384w,
+/static/31dbf2cd7f4c474324b4e5f88b21ea7b/fe486/prototype2.png 768w,
+/static/31dbf2cd7f4c474324b4e5f88b21ea7b/91af2/prototype2.png 904w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/31dbf2cd7f4c474324b4e5f88b21ea7b/fe486/prototype2.png"
+            alt="file:///C:/Reactblog/LEEBLOG/static/js/prototype2.png"
+            title="file:///C:/Reactblog/LEEBLOG/static/js/prototype2.png"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></h2>
+<p>위 그림처럼 객체는 __proto__ 접근자 프로퍼티를 통해</p>
+<p>자신의 프로토타입에 간접적으로 접근할 수 있습니다.</p>
+<p>프로토타입은 자신의 constructor 프로퍼티를 통해 생성자 함수에 접근할 수 있고,</p>
+<p>생성자 함수는 자신의 prototype프로퍼티를 통해 프로토타입에 접근할 수 있습니다.</p>
+<h2>프로토타입 객체</h2>
+<p>자바스크립트는 객체의 프로퍼티에 접근하려고 할 때 해당 객체에 접근하려는</p>
+<p>프로퍼티가 없다면 내부 슬롯의 참조를 따라 자신의 부모 역할을 하는</p>
+<p>프로토타입의 프로퍼티를 순차적으로 검색합니다. 이를 프로토타입 체인이라고 합니다.</p>
+<p>프로토타입 체인은 자바스크립트가 상속을 구현하는 메커니즘입니다.</p>
+<p>프로토타입 체인의 최상위에 위치하는 객체는 언제나 Object.prototype입니다.</p>
+<p>따라서 Object.prototype을 프로토타입 체인의 종점이라고 합니다.</p></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">제 블로그에 방문해주셔서 감사합니다. 😊</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/javascriptprototype/";window.___webpackCompilationHash="9f5a343bac024747731a";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-5364d16a56eba8b4496f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-da0f1354074b3fb451dc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-31b1b037074fc603b07d.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c7dc62ecd5c83f0034b0.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-5364d16a56eba8b4496f.js" async=""></script><script src="/framework-c57a9454c0e3bef16c3b.js" async=""></script><script src="/webpack-runtime-ed14da73140b30fdea27.js" async=""></script></body></html>
