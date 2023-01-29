@@ -46,6 +46,10 @@ Google보다 좋은 결과가 나오기도 합니다.
 
 ## 사용 예제
 
+한국어로도 사용할 수 있지만 영어가 속도가 더 빠릅니다.
+
+또 가끔은 영어로 질문해도 속도가 느리거나 에러가 납니다.
+
 1. 자바스크립트 데이터 타입 질문
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/ai/chatgpt.PNG](../static/ai/chatgpt.PNG)
