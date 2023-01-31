@@ -76,7 +76,13 @@ CSR은 초기화면이 로딩이 너무 오래걸려서 검색엔진 봇들이
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/nextjs/router.PNG](../static/nextjs/router.PNG)
 
-라우팅 설정을 할 필요가 없어서 시간 절약을 할 수 있을 것 같습니다.
+React에서 당연히 해야 했던 라우팅 설정을 할 필요가 없어서
+
+시간 절약을 할 수 있을 것 같습니다.
+
+덤으로 404처리도 안 해도 됩니다.
+
+## ![file:///C:/Reactblog/LEEBLOG/static/nextjs/404.PNG](../static/nextjs/404.PNG)
 
 ### Next.js는 SPA의 장점을 유지합니다.
 
