@@ -70,6 +70,8 @@ CSR은 초기화면이 로딩이 너무 오래걸려서 검색엔진 봇들이
 
 프로젝트의 /pages폴더에서 컴포넌트를 export하면 폴더명이 페이지 route가 됩니다.
 
+예외가 있다면 index.js는 Home화면입니다.
+
 테스트 완료한 화면을 보여드리겠습니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/nextjs/routervscode.PNG](../static/nextjs/routervscode.PNG)
