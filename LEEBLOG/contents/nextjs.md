@@ -70,6 +70,12 @@ CSR은 초기화면이 로딩이 너무 오래걸려서 검색엔진 봇들이
 
 프로젝트의 /pages폴더에서 컴포넌트를 export하면 폴더명이 페이지 route가 됩니다.
 
+테스트 완료한 화면을 보여드리겠습니다.
+
+## ![file:///C:/Reactblog/LEEBLOG/static/nextjs/routervscode.PNG](../static/nextjs/routervscode.PNG)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/nextjs/router.PNG](../static/nextjs/router.PNG)
+
 ### Next.js는 SPA의 장점을 유지합니다.
 
 첫페이지는 SSR방식을 이용 다른 페이지로 이동할 때부터는
