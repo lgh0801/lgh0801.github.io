@@ -1,5 +1,5 @@
 ---
-date: '2022-10-05'
+date: '2022-11-20'
 title: 'Cookie vs Session vs Web Storage'
 categories: ['Network']
 summary: 'Cookie/Session/Web Storage 비교하기'
