@@ -3,7 +3,7 @@ date: '2022-12-22'
 title: '계산기'
 categories: ['React', 'Typescript', 'Styled-Components']
 summary: '간단한 계산기 만들어보기'
-thumbnail: './tsthumbnail.png'
+thumbnail: './reactthumbnail.png'
 ---
 
 ## 계산기
