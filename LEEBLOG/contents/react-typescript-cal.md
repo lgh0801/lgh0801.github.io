@@ -8,9 +8,9 @@ thumbnail: './reactthumbnail.png'
 
 ## 계산기
 
-갑자기 간단한 계산기를 만들어보고 싶어서
+윈도우 계산기를 사용하다가 간단한 계산기를 만들어보고 싶어서
 
-React,TypeScript,Styled-Components를 사용하여 만들었습니다.
+React, TypeScript, Styled-Components를 사용하여 계산기를 만들게 되었습니다.
 
 C = 초기화 / CE 한칸씩 지우기 / . 소수점 / 사칙연산
 
