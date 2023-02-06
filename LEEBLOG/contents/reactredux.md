@@ -1,5 +1,5 @@
 ---
-date: '2022-03-19'
+date: '2022-03-01'
 title: 'React Redux 정의'
 categories: ['React']
 summary: 'Redux 에 대해 알아보기'

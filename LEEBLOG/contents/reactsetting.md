@@ -1,5 +1,5 @@
 ---
-date: '2022-03-10'
+date: '2022-02-18'
 title: 'React 설치 방법'
 categories: ['React']
 summary: 'React 설치 및 세팅'

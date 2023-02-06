@@ -1,5 +1,5 @@
 ---
-date: '2022-02-27'
+date: '2022-02-01'
 title: 'Javascript this'
 categories: ['Javascript']
 summary: 'Javascript this 간단하게 알아보기'

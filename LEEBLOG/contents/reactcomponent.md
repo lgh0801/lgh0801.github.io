@@ -1,5 +1,5 @@
 ---
-date: '2022-03-14'
+date: '2022-02-26'
 title: 'React 클래스형,함수형'
 categories: ['React']
 summary: 'React 클래스형, 함수형 컴포넌트 차이'
