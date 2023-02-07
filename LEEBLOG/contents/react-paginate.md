@@ -1,14 +1,14 @@
 ---
 date: '2022-03-05'
 title: '페이징'
-categories: ['React']
+categories: ['React', 'ToyProject']
 summary: 'react-paginate 사용하여 페이징 구현'
 thumbnail: './reactthumbnail.png'
 ---
 
 ## 페이징
 
-ToyProject를 진행하는중에 게시판 글에 페이징기능이 필요하여서
+ToyProject를 진행하는 중에 게시판 글에 페이징 기능이 필요하여서
 
 페이지네이션 라이브러리인 react-paginate를 사용하기로 하였습니다.
 

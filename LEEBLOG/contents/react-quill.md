@@ -1,14 +1,14 @@
 ---
 date: '2022-03-09'
 title: '게시판 에디터'
-categories: ['React']
+categories: ['React', 'ToyProject']
 summary: 'react-quill 사용하여 에디터 구현'
 thumbnail: './reactthumbnail.png'
 ---
 
 ## 게시판 에디터
 
-ToyProject를 진행하는중에 게시판 글에 에디터기능을 삽입하고자
+ToyProject를 진행하는 중에 게시판 글에 에디터 기능을 삽입하고자
 
 에디터 라이브러리인 react-quill를 사용하기로 하였습니다.
 
@@ -26,7 +26,7 @@ $ npm install react-quill
 
 클래스형 컴포넌트를 사용하여 구현하였습니다.
 
-처음 프로젝트를 공부하고 만들때 클래스형 컴포넌트로 했어가지고...
+처음 프로젝트를 공부하고 만들때 클래스형 컴포넌트로 했어가지고..
 
 다른 부분이나 새로만드는 컴포넌트 부분은 Hook방식으로 다 수정하거나 만들었지만
 
@@ -46,6 +46,7 @@ ToyProject에 적용한 react-quill와 관련된 일부 코드 부분만을
 
 ```javascript
 //View.js
+import axios from 'axios'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 
@@ -189,7 +190,7 @@ modules >> handlers >> image 부분에 함수를 넣어서
 
 따로 작업하였습니다.
 
-서버쪽은 파일 업로드를 구현하였던 코드를 그대로 사용하였습니다.
+서버쪽(node.js)는 파일 업로드를 구현하였던 전체 코드를 그대로 사용하였습니다.
 
 ```javascript
 //fileupload.js
@@ -223,3 +224,5 @@ const upload = multer({ storage: storage }).single('file')
 //파일이 하나이니 single('file')함수도 붙여줍니다.
 module.exports = upload
 ```
+
+## ![file:///C:/Reactblog/LEEBLOG/static/react/editor.PNG](../static/react/editor.PNG)
