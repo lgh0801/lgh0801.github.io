@@ -20,9 +20,11 @@ thumbnail: './reactthumbnail.png'
 
 아래 소스코드를 보겠습니다.
 
+1. CommentInput.js
+
 일단 첫번째로는 댓글 목록들을 보여주고
 
-댓글을 입력할수있는 화면을 가지고있는 컴포넌트 CommentInput
+댓글을 입력할수있는 화면을 가지고있는 컴포넌트
 
 ```javascript
 //CommentInput.js
@@ -174,6 +176,8 @@ responseto에 넣어줄겁니다.
 이유는 responseto랑 부모ID가 같은경우만
 
 해당 답글을 뿌려주기 위해서입니다.
+
+2. CommentList.js
 
 responseto는 아래 CommentList 소스에서 보겠습니다
 
@@ -460,6 +464,8 @@ ModiftyCheck bool여부로 일반 댓글/답글 화면과 수정화면을 분리
 
 prop에서 가져온 함수를 이용하여 댓글목록을 최신화 시켰습니다.
 
+3. ReplyComment.js
+
 이제 마지막 소스는 댓글에 달린 답글을 누르면 해당 답글들을 뿌려주는 컴포넌트입니다.
 
 ```javascript
@@ -547,4 +553,6 @@ CommentInput에서 받아서 props를 이용하여
 
 react로 댓글을 구현하는것은 처음이라서 저한테는 좋은 경험이 됐습니다.
 
-## ![file:///C:/Reactblog/LEEBLOG/static/react/redux.PNG](../static/react/redux.PNG)
+## ![file:///C:/Reactblog/LEEBLOG/static/react/Sub2.PNG](../static/react/Sub2.PNG)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/react/replymodify.PNG](../static/react/replymodify.PNG)
