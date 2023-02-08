@@ -5,8 +5,11 @@
 <p>수정, 삭제, 날짜표시, 사용자 권한등을 더 추가해서 완성했습니다.</p>
 <p>우선 이기능을 구현하기 위해서 3개의 컴포넌트를 만들었습니다.</p>
 <p>아래 소스코드를 보겠습니다.</p>
+<ol>
+<li>CommentInput.js</li>
+</ol>
 <p>일단 첫번째로는 댓글 목록들을 보여주고</p>
-<p>댓글을 입력할수있는 화면을 가지고있는 컴포넌트 CommentInput</p>
+<p>댓글을 입력할수있는 화면을 가지고있는 컴포넌트</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//CommentInput.js</span>
 <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
 <span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
@@ -147,6 +150,9 @@
 <p>responseto에 넣어줄겁니다.</p>
 <p>이유는 responseto랑 부모ID가 같은경우만</p>
 <p>해당 답글을 뿌려주기 위해서입니다.</p>
+<ol start="2">
+<li>CommentList.js</li>
+</ol>
 <p>responseto는 아래 CommentList 소스에서 보겠습니다</p>
 <p>소스가 길어서 아래에서 간략하게 설명하겠습니다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//CommentList.js</span>
@@ -419,6 +425,9 @@
 <p>ModiftyCheck bool여부로 일반 댓글/답글 화면과 수정화면을 분리하였습니다.</p>
 <p>수정/삭제시 props.refreshFunction(response.data.json)</p>
 <p>prop에서 가져온 함수를 이용하여 댓글목록을 최신화 시켰습니다.</p>
+<ol start="3">
+<li>ReplyComment.js</li>
+</ol>
 <p>이제 마지막 소스는 댓글에 달린 답글을 누르면 해당 답글들을 뿌려주는 컴포넌트입니다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//ReplyComment.js</span>
 <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
@@ -495,4 +504,5 @@
 <p>답글은 차이를 주기위해 style를 보면 좀더 오른쪽으로 빠집니다.</p>
 <p>댓글/답글 기능을 완료했습니다.</p>
 <p>react로 댓글을 구현하는것은 처음이라서 저한테는 좋은 경험이 됐습니다.</p>
-<h2><img src="/0b0955363cb8e82317ec0bdfe7bbd484/redux.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/redux.PNG"></h2></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">제 블로그에 방문해주셔서 감사합니다. 😊</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/reactcomment/";window.___webpackCompilationHash="9f5a343bac024747731a";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-5364d16a56eba8b4496f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-da0f1354074b3fb451dc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-31b1b037074fc603b07d.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c7dc62ecd5c83f0034b0.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-5364d16a56eba8b4496f.js" async=""></script><script src="/framework-c57a9454c0e3bef16c3b.js" async=""></script><script src="/webpack-runtime-ed14da73140b30fdea27.js" async=""></script></body></html>
+<h2><img src="/76c2c55fdadd9e8121515f701fbb7485/Sub2.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/Sub2.PNG"></h2>
+<h2><img src="/0b122007b27f186a96351b60e58fc5aa/replymodify.png" alt="file:///C:/Reactblog/LEEBLOG/static/react/replymodify.PNG"></h2></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">제 블로그에 방문해주셔서 감사합니다. 😊</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/reactcomment/";window.___webpackCompilationHash="9f5a343bac024747731a";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-5364d16a56eba8b4496f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-da0f1354074b3fb451dc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-31b1b037074fc603b07d.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c7dc62ecd5c83f0034b0.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-5364d16a56eba8b4496f.js" async=""></script><script src="/framework-c57a9454c0e3bef16c3b.js" async=""></script><script src="/webpack-runtime-ed14da73140b30fdea27.js" async=""></script></body></html>
