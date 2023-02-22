@@ -1,7 +1,7 @@
 ---
 date: '2022-03-25'
 title: '협업을 위한 Branch 활용법'
-categories: ['Git', 'Branch']
+categories: ['Git']
 summary: '협업을 위한 Git 기본 학습'
 thumbnail: './gitthumbnail.png'
 ---
