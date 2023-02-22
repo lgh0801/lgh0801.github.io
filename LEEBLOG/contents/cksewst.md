@@ -3,7 +3,7 @@ date: '2022-11-20'
 title: 'Cookie vs Session vs Web Storage'
 categories: ['Network']
 summary: 'Cookie/Session/Web Storage 비교하기'
-thumbnail: './fetch&axiosthumbnail.png'
+thumbnail: './Networking.jpg'
 ---
 
 ## HTTP 프로토콜 한계

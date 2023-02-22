@@ -3,7 +3,7 @@ date: '2022-09-10'
 title: 'REST/REST API/RESTful'
 categories: ['Network']
 summary: 'REST 개념 설명'
-thumbnail: './fetch&axiosthumbnail.png'
+thumbnail: './Networking.jpg'
 ---
 
 ## REST

@@ -3,7 +3,7 @@ date: '2022-06-01'
 title: 'fetch vs axios'
 categories: ['Network']
 summary: 'http통신 비교하기'
-thumbnail: './fetch&axiosthumbnail.png'
+thumbnail: './Networking.jpg'
 ---
 
 # fetch란?
