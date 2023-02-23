@@ -1,5 +1,5 @@
 ---
-date: '2022-10-05'
+date: '2022-09-23'
 title: 'React에서 API Key 관리'
 categories: ['React']
 summary: 'API Key 보안 방법을 알아보자'
