@@ -12,19 +12,19 @@ thumbnail: './reactthumbnail.png'
 
 아래는 구현 화면 입니다.
 
+### 카테고리 전체
+
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping1.PNG](../static/react/homeshopping1.PNG)
 
-카테고리 전체
+### 네비게이션바 / 콤보박스 카테고리 클릭 또는 변경시 화면
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping2.PNG](../static/react/homeshopping2.PNG)
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping3.PNG](../static/react/homeshopping3.PNG)
 
-네비게이션바 / 콤보박스 카테고리 클릭 또는 변경시 화면
+### 페이지네이션 기능 화면
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping4.PNG](../static/react/homeshopping4.PNG)
-
-페이지네이션 기능 화면
 
 ### App.tsx
 
