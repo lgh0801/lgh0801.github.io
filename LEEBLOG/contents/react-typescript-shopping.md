@@ -8,7 +8,7 @@ thumbnail: './reactthumbnail.png'
 
 ## 홈쇼핑 메인화면
 
-구글링 대신 ChatGPT를 사용하여 간단한 홈쇼핑 메인화면 틀을 만들어 봤습니다.
+구글링 대신 ChatGPT와 협업하여 간단한 홈쇼핑 메인화면 틀을 만들어 봤습니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping1.PNG](../static/react/homeshopping1.PNG)
 
