@@ -10,19 +10,21 @@ thumbnail: './reactthumbnail.png'
 
 구글링 대신 ChatGPT와 협업하여 간단한 홈쇼핑 메인화면 틀을 만들어 봤습니다.
 
-카테고리 전체
+아래는 구현 화면 입니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping1.PNG](../static/react/homeshopping1.PNG)
 
-네비게이션바 / 콤보박스 카테고리 클릭 또는 변경시 화면
+카테고리 전체
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping2.PNG](../static/react/homeshopping2.PNG)
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping3.PNG](../static/react/homeshopping3.PNG)
 
-페이지네이션 기능 화면
+네비게이션바 / 콤보박스 카테고리 클릭 또는 변경시 화면
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping4.PNG](../static/react/homeshopping4.PNG)
+
+페이지네이션 기능 화면
 
 ### App.tsx
 
