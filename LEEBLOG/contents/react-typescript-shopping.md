@@ -1,7 +1,7 @@
 ---
 date: '2023-01-15'
 title: '홈쇼핑 메인화면'
-categories: ['React', 'Typescript', 'Styled-Components']
+categories: ['React', 'Typescript', 'Styled-Components', 'AI']
 summary: '홈쇼핑 메인화면 느낌에 틀 만들어보기'
 thumbnail: './reactthumbnail.png'
 ---
@@ -9,6 +9,10 @@ thumbnail: './reactthumbnail.png'
 ## 홈쇼핑 메인화면
 
 React, TypeScript, Styled-Components를 사용하여 홈쇼핑 메인화면 틀을 만들어 봤습니다.
+
+보통은 구글링으로 개발하지만 AI 시대인 만큼 Chatgpt를 사용해서 개발하였습니다.
+
+사용후기는 마지막에 적어놨습니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping1.PNG](../static/react/homeshopping1.PNG)
 
@@ -543,5 +547,9 @@ export default ProductCard
 정말 디자인 같은 부분과 시간 단축을 위해서 필요한 코드들을
 
 서로 티키타카 하면서 소스를 수정해보고 응용하니 정말 든든한 동료가 생긴 느낌이었습니다.
+
+물론 항상 옳은 답을 주는 것은 아니므로 검증할 수 있어야 하고 코드를 이해해서 응용할 수 있는
+
+능력과 질문에 질을 높이는 능력이 필수일 것 같습니다.
 
 앞으로는 이런 AI 기술을 잘 사용할 수 있는 개발자로 방향을 잡아야 하지 않을까 싶습니다.
