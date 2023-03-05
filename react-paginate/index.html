@@ -20,6 +20,22 @@
     <span class="token literal-property property">pageCount</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> cookie_userid <span class="token operator">=</span> cookie<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token string">'userid'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cookie_userid <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">&amp;&amp;</span> kakaoInfo<span class="token punctuation">.</span>kakaousernum <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">'/login'</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      inputSearchRef<span class="token punctuation">.</span>current<span class="token punctuation">.</span>value <span class="token operator">!==</span> <span class="token string">''</span> <span class="token operator">||</span>
+      selectSearchRef<span class="token punctuation">.</span>current<span class="token punctuation">.</span>value <span class="token operator">!==</span> <span class="token string">'title'</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//글 카테고리 바뀔때마다 초기화</span>
+      selectSearchRef<span class="token punctuation">.</span>current<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'title'</span>
+      inputSearchRef<span class="token punctuation">.</span>current<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">callListApi</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>page<span class="token punctuation">.</span>currentPage<span class="token punctuation">,</span> page<span class="token punctuation">.</span>offset<span class="token punctuation">,</span> props<span class="token punctuation">.</span>match<span class="token punctuation">.</span>params<span class="token punctuation">.</span>kind<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
   <span class="token keyword">const</span> <span class="token function-variable function">HandlePageClick</span> <span class="token operator">=</span> <span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token comment">//e.selected 1페이지 선택시 값은 0</span>
     <span class="token keyword">const</span> selectedPage <span class="token operator">=</span> e<span class="token punctuation">.</span>selected
@@ -61,6 +77,48 @@
       <span class="token operator">/</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
   <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>css 부분은 containerClassName을 이용하여 스타일링 할 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token comment">/* 페이징 */</span>
+<span class="token selector">.pagination</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 15px auto<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.pagination > .active > a</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #25b156<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> #25b156<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.pagination > li > a</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #25b156<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 5px 10px<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #25b156<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> #25b156<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.pagination > li > a,
+.pagination > li > span</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #25b156<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span</span> <span class="token punctuation">{</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>ReactPaginate는 필요에 맞게 찾아서 옵션을 사용하시면 됩니다.</p>
 <ul>
