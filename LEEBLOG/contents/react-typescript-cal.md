@@ -84,7 +84,7 @@ const Button = styled.button<BackgroundProps>`
     background-color: #ddd;
   }
 `
-const Adder: React.FC = () => {
+const Adder = () => {
   const [value, setValue] = useState<string>('')
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     switch (event.currentTarget.value) {

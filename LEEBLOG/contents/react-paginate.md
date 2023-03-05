@@ -37,6 +37,22 @@ const List = props => {
     pageCount: 0,
   })
 
+  useEffect(() => {
+    let cookie_userid = cookie.load('userid')
+    if (cookie_userid === undefined && kakaoInfo.kakaousernum === '') {
+      window.location.href = '/login'
+    }
+    if (
+      inputSearchRef.current.value !== '' ||
+      selectSearchRef.current.value !== 'title'
+    ) {
+      //글 카테고리 바뀔때마다 초기화
+      selectSearchRef.current.value = 'title'
+      inputSearchRef.current.value = ''
+    }
+    callListApi()
+  }, [page.currentPage, page.offset, props.match.params.kind])
+
   const HandlePageClick = e => {
     //e.selected 1페이지 선택시 값은 0
     const selectedPage = e.selected
@@ -78,6 +94,52 @@ const List = props => {
       />
     </>
   )
+}
+```
+
+css 부분은 containerClassName을 이용하여 스타일링 할 수 있습니다.
+
+```css
+/* 페이징 */
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination > .active > a {
+  background-color: #25b156;
+  border-color: #25b156;
+  color: #fff;
+}
+.pagination > li > a {
+  border: 1px solid #25b156;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #25b156;
+  border-color: #25b156;
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #25b156;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
 }
 ```
 
