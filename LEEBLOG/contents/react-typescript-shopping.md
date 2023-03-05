@@ -8,11 +8,7 @@ thumbnail: './reactthumbnail.png'
 
 ## 홈쇼핑 메인화면
 
-React, TypeScript, Styled-Components를 사용하여 홈쇼핑 메인화면 틀을 만들어 봤습니다.
-
-보통은 구글링으로 개발하지만 AI 시대인 만큼 Chatgpt를 사용해서 개발하였습니다.
-
-사용후기는 마지막에 적어놨습니다.
+구글링 대신 ChatGPT를 사용하여 간단한 홈쇼핑 메인화면 틀을 만들어 봤습니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping1.PNG](../static/react/homeshopping1.PNG)
 
@@ -26,10 +22,9 @@ React, TypeScript, Styled-Components를 사용하여 홈쇼핑 메인화면 틀�
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/react/homeshopping4.PNG](../static/react/homeshopping4.PNG)
 
-아래는 구현 소스 부분입니다.
+### App.tsx
 
 ```typescript
-//App.tsx
 import React, { useState } from 'react'
 import Header from './commponent/Header'
 import Navigation from './commponent/Navigation'
@@ -65,12 +60,13 @@ const App = () => {
 export default App
 ```
 
-네비게이션바와 홈페이지 컴포넌트에 각각 함수와 값들을 넘겨줍니다.
+네비게이션바와 홈페이지 컴포넌트에 prop으로 함수와 값들을 넘겨줍니다.
 
 products는 제품들 데이터 값 입니다.
 
+### Header.tsx
+
 ```typescript
-//Header.tsx
 import styled from 'styled-components'
 
 const HeaderWrapper = styled.header`
@@ -123,8 +119,9 @@ const Header = () => {
 export default Header
 ```
 
+### products.ts
+
 ```typescript
-//products.ts
 export interface Product {
   id: number
   name: string
@@ -208,8 +205,9 @@ interface로 데이터 타입들을 지정
 
 데이터들은 배열에 객체형식으로 담고 각각 export
 
+### Navigation.tsx
+
 ```typescript
-//Navigation.tsx
 import styled from 'styled-components'
 
 const NavigationWrapper = styled.nav`
@@ -271,8 +269,9 @@ map을 이용하여 카테고리 뿌려주기
 
 이제 HomePage.tsx으로 넘어가겠습니다.
 
+### HomePage.tsx
+
 ```typescript
-//HomePage.tsx
 import React, { useState, useEffect } from 'react'
 import ProductCard from '../commponent/ProductCard'
 import { Product } from '../data/products'
@@ -421,8 +420,9 @@ activeCategory가 전체인 경우에는 모든 상품이 포함된 리스트를
 
 ProductFilter 부분은 콤보박스입니다.
 
+### ProductFilter.tsx
+
 ```typescript
-//ProductFilter.tsx
 import React from 'react'
 import styled from 'styled-components'
 
