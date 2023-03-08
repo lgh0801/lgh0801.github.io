@@ -1,16 +1,20 @@
 ---
 date: '2023-01-15'
-title: '홈쇼핑 메인화면'
+title: 'ChatGPT 사용해 보기'
 categories: ['React', 'Typescript', 'Styled-Components', 'AI']
-summary: '홈쇼핑 메인화면 느낌에 틀 만들어보기'
+summary: 'AI를 도구로 사용해서 간단한 홈쇼핑 메인화면 구현'
 thumbnail: './reactthumbnail.png'
 ---
 
 ## 홈쇼핑 메인화면
 
-이번에는 개발할 때 구글링 대신 ChatGPT를 사용하여
+이번에는 AI를 이용하여 개발하는 거에 익숙해지기 위해서 ChatGPT를
 
-간단한 홈쇼핑 메인화면 틀을 만들어 봤습니다.
+도구로 사용하여 간단한 홈쇼핑 메인화면 틀을 구현해봤습니다.
+
+기능은 네비게이션바 / 콤보박스 해당 카테고리 클릭 또는 변경 시
+
+화면 전환과 페이지네이션 구현이었습니다.
 
 아래는 구현 화면입니다.
 
