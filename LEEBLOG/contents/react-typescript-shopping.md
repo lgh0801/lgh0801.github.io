@@ -1,6 +1,6 @@
 ---
 date: '2023-01-15'
-title: 'ChatGPT 사용해 보기'
+title: 'ChatGPT 사용해서 간단한 화면 만들어보기'
 categories: ['React', 'Typescript', 'Styled-Components', 'AI']
 summary: 'AI를 도구로 사용해 간단한 홈쇼핑 메인화면 구현'
 thumbnail: './reactthumbnail.png'
@@ -16,7 +16,7 @@ thumbnail: './reactthumbnail.png'
 
 화면 전환과 페이지네이션 구현이었습니다.
 
-아래는 구현 화면입니다.
+아래에는 구현 화면, 소스 코드, 사용 후기를 작성해놨습니다.
 
 ### 카테고리 전체
 
