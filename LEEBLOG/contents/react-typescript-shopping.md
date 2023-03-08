@@ -1,6 +1,6 @@
 ---
 date: '2023-01-15'
-title: 'ChatGPT 사용해서 간단한 화면 만들어보기'
+title: 'ChatGPT 사용해서 간단한 화면 구현'
 categories: ['React', 'Typescript', 'Styled-Components', 'AI']
 summary: 'AI를 도구로 사용해 간단한 홈쇼핑 메인화면 구현'
 thumbnail: './reactthumbnail.png'
