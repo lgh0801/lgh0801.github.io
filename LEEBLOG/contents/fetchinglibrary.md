@@ -120,7 +120,7 @@ export default App
 
 - isValidating을 이용해 상태를 표현합니다.
 
-- useSWR()을 통해 얻은 데이터를 mutate()를 사용하여 업데이트해 줍니다.
+- useSWR 훅을 통하여 얻은 데이터를 mutate()를 사용하여 업데이트해 줍니다.
 
 ## 마치면서
 
