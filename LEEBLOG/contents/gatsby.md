@@ -1,7 +1,7 @@
 ---
 date: '2022-04-11'
 title: 'Gatsby'
-categories: ['Gatsby', 'Framework']
+categories: ['React', 'Framework']
 summary: 'Javascript Map 메소드 사용하기'
 thumbnail: './gatsbythumbnail.png'
 ---

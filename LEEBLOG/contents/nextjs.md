@@ -1,7 +1,7 @@
 ---
 date: '2022-11-12'
 title: 'Next.js'
-categories: ['Next.js', 'Framework']
+categories: ['React', 'Framework']
 summary: 'Next.js 이해하기'
 thumbnail: './nextjsthumbnail.PNG'
 ---

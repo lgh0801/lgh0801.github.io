@@ -1,7 +1,7 @@
 ---
 date: '2022-03-23'
 title: '깃(Git),깃허브(Github) 세팅 및 연결'
-categories: ['Git', 'Github']
+categories: ['Git']
 summary: '깃(Git) 설치 및 세팅, 깃허브(Github) 연결 방법'
 thumbnail: './gitthumbnail.png'
 ---
