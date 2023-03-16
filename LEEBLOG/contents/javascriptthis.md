@@ -65,9 +65,7 @@ this값은 함수를 만날 때마다 바뀔 수 있기 때문에 본인이 원�
 let obj = {
   name: ['kim', 'lee'],
   func: function () {
-    obj.name.forEach(() => {
-      console.log(this)
-    })
+    console.log(this)
   },
 }
 
