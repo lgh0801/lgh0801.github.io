@@ -90,7 +90,7 @@ git commit -m "first commit" 명령어를 통해 히스토리를 만들어줍니
 
 깃허브 프로젝트와 깃을 연결하는 방법은 깃허브에서 프로젝트를 만들었을 때 나온 명령들 중
 
-get remote... 명령을 그대로 붙여서 실행해주면 됩니다. git remote -v 명령어로 연결 확인이 가능합니다.
+get remote.. 명령을 그대로 붙여서 실행해주면 됩니다. git remote -v 명령어로 연결 확인이 가능합니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/gitsetting/remote.PNG](../static/gitsetting/remote.PNG)
 
