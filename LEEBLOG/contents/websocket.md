@@ -40,4 +40,6 @@ Socket 통신은 Server 역시 Client로 요청을 보낼 수 있습니다.
 
 계속해서 요청을 보내야해서 부하가 걸릴것입니다.
 
+대표적인 프레임워크로는 Socket.io가 있습니다.
+
 ## ![file:///C:/Reactblog/LEEBLOG/static/network/httpwebsocket.png](../static/network/httpwebsocket.png)
