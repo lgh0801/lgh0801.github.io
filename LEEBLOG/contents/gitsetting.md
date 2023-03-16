@@ -10,23 +10,39 @@ thumbnail: './gitthumbnail.png'
 
 먼저 설치하기 위해서 깃(Git) 홈페이지(https://git-scm.com/) 들어가야 합니다.
 
-깃(Git) 홈페이지에 들어오시면 'Latest source Release'라는 부분에 'Download for Windows'를 클릭하셔서 설치할 수 있고, 설치 과정은 계속 다음(또는 Next)을 눌러주시면 됩니다..
+깃(Git) 홈페이지에 들어오시면 'Latest source Release'라는 부분에 'Download for Windows'를 클릭하셔서
+
+설치할 수 있고, 설치 과정은 계속 다음(또는 Next)을 눌러주시면 됩니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/gitsetting/gitinstall.png](../static/gitsetting/gitinstall.png)
 
-설치가 완료되셨다면 이제 깃(Git) 환경설정을 해줘야 합니다. Windows 환경에서 시작 메뉴에 Git 관련 메뉴가 생기셨을 겁니다. 그중 Git Bash를 클릭하여줍니다.
+설치가 완료되셨다면 이제 깃(Git) 환경설정을 해줘야 합니다.
+
+Windows 환경에서 시작 메뉴에 Git 관련 메뉴가 생기셨을 겁니다.
+
+그중 Git Bash를 클릭하여줍니다.
 
 프롬프트가 나오실 텐데 먼저 사용자 이름을 입력해주는 명령어를 작성하고 클릭해봅니다.
 
-명령어는 git config --global user.name "사용자명"입니다.
+```bash
+git config --global user.name "사용자명"
+```
 
 다음은 이메일을 입력해주는 명령어를 작성하고 클릭해봅니다.
 
-명령어는 git config --global user.email "이메일"입니다. 이 이메일을 기억해줍시다.
+```bash
+git config --global user.email "이메일"
+```
+
+이 이메일을 기억해줍시다.
 
 나중에 깃허브 가입할 때 사용하는 이메일과 같아야 하기 때문입니다.
 
-이제 제대로 입력값이 들어갔는지 확인해봅시다. git config --list 명령어로 확인합니다.
+이제 제대로 입력값이 들어갔는지 확인해봅시다.
+
+```bash
+git config --list
+```
 
 여기까지 잘 나오신다면 기본적인 세팅은 끝났습니다.
 
@@ -45,8 +61,11 @@ thumbnail: './gitthumbnail.png'
 ## ![file:///C:/Reactblog/LEEBLOG/static/gitsetting/newRepositories.PNG](../static/gitsetting/newRepositories.PNG)
 
 'Repository name'은 프로젝트명을 자유롭게 작성해주시면 됩니다.
+
 밑에 Public과 Private는 프로젝트를 공개 또는 비공개하겠다는 의미입니다.
+
 개인 사이트 연동시 무료회원이면 무조건 Public 선택 하셔야 합니다.
+
 설정이 끝나면 'Create repository'를 클릭하시면 생성이 완료됩니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/gitsetting/Create.PNG](../static/gitsetting/Create.PNG)
