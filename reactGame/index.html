@@ -133,30 +133,25 @@
     <span class="token function">setDisplayquiz</span><span class="token punctuation">(</span>quiz<span class="token punctuation">[</span>quiz<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     <span class="token function">setDisplayimg</span><span class="token punctuation">(</span><span class="token punctuation">[</span>imagePath<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> imagePath<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-  <span class="token keyword">const</span> <span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token parameter">ox</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    <span class="token comment">//내가 선택한 정답과 display정답을 비교</span>
+  <span class="token comment">//내가 선택한 정답과 display정답을 비교</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">clickHandler</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token parameter">ox</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>ox<span class="token punctuation">.</span>name <span class="token operator">===</span> displayquiz<span class="token punctuation">.</span>answer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'정답입니다.'</span><span class="token punctuation">)</span>
-      <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
-      quiz<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token comment">//마지막이 정답일 경우</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>quiz<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">alert</span><span class="token punctuation">(</span>
-          <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">문제를 다 풀었습니다. 총 6문제 중 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 문제 맞추셨습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-        <span class="token punctuation">)</span>
-        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span>
+      <span class="token keyword">await</span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">//await를 사용하여 동기식으로 바꿔놔야 마지막문제 개수를 정확히 넣음</span>
+      <span class="token function">popEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
       <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'틀렸습니다.'</span><span class="token punctuation">)</span>
-      quiz<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token comment">//마지막이 오답일 경우</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>quiz<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">문제를 다 풀었습니다. 총 6문제 중 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 문제 맞추셨습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span>
+      <span class="token function">popEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-    <span class="token function">setDisplayquiz</span><span class="token punctuation">(</span>quiz<span class="token punctuation">[</span>quiz<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token function">setDisplayquiz</span><span class="token punctuation">(</span>quizs<span class="token punctuation">[</span>quizs<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">popEnd</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    quizs<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>quizs<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">문제를 다 풀었습니다. 총 6문제 중 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 문제 맞추셨습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+      window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
