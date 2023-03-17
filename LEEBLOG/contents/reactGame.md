@@ -165,30 +165,25 @@ const Game = () => {
     setDisplayquiz(quiz[quiz.length - 1])
     setDisplayimg([imagePath[0], imagePath[1]])
   }, [])
-
-  const clickHandler = ox => {
-    //내가 선택한 정답과 display정답을 비교
+  //내가 선택한 정답과 display정답을 비교
+  const clickHandler = async ox => {
     if (ox.name === displayquiz.answer) {
       alert('정답입니다.')
-      setCount(count + 1)
-      quiz.pop()
-      //마지막이 정답일 경우
-      if (quiz.length === 0) {
-        alert(
-          `문제를 다 풀었습니다. 총 6문제 중 ${count + 1} 문제 맞추셨습니다.`,
-        )
-        window.location.reload()
-      }
+      await setCount(count + 1) //await를 사용하여 동기식으로 바꿔놔야 마지막문제 개수를 정확히 넣음
+      popEnd()
     } else {
       alert('틀렸습니다.')
-      quiz.pop()
-      //마지막이 오답일 경우
-      if (quiz.length === 0) {
-        alert(`문제를 다 풀었습니다. 총 6문제 중 ${count} 문제 맞추셨습니다.`)
-        window.location.reload()
-      }
+      popEnd()
     }
-    setDisplayquiz(quiz[quiz.length - 1])
+    setDisplayquiz(quizs[quizs.length - 1])
+  }
+
+  const popEnd = () => {
+    quizs.pop()
+    if (quizs.length === 0) {
+      alert(`문제를 다 풀었습니다. 총 6문제 중 ${count} 문제 맞추셨습니다.`)
+      window.location.reload()
+    }
   }
 
   return (
