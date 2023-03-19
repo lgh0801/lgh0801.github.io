@@ -106,7 +106,7 @@ React18에서는 새로운 서버 사이드 렌더링(이하 SSR) 아키텍처�
 
 새롭게 pipeToNodeWritable API가 추가 되었고,
 
-이 API를 사용하면 SSR을 통해 <Suspense>를 사용할 수 있게 되었습니다.
+이 API를 사용하면 SSR을 통해 Suspense를 사용할 수 있게 되었습니다.
 
 React.lazy는 동적 import를 통해 컴포넌트를 렌더링하며,
 
