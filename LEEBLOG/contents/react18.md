@@ -112,6 +112,10 @@ React.lazy는 동적 import를 통해 컴포넌트를 렌더링하며,
 
 이를 lazy 컴포넌트 라고 합니다.
 
+lazy 컴포넌트를 사용하는 주된 이유는 페이지의 무게가 줄어들어
+
+초기 페이지 로드 시간이 빨라집니다.
+
 ```javascript
 import { lazy } from 'react'
 
@@ -124,11 +128,9 @@ const Comments = lazy(() => import('./Comments.js'))
 
 서버단에서 HTML 스트리밍을 담당하는 기존의 renderToString() 대신,
 
-pipeToNodeWritable API가 React 18에 새롭게 추가됩니다.
+새로운 렌더링 API인 pipeToNodeWritable 덕분에,
 
-React 18부터는 새로운 렌더링 API인 pipeToNodeWritable 덕분에,
-
-<Suspense>와 함께 lazy 컴포넌트를 사욯할 수 있게 되어 앱을
+Suspense와 함께 lazy 컴포넌트를 사용할 수 있게 되어 앱을
 
 현재 리액트 생태계의 주류 환경인 웹팩 기반의 애플리케이션에서,
 
