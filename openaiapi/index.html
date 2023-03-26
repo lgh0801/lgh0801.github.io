@@ -73,7 +73,7 @@ app<span class="token punctuation">.</span><span class="token function">post</sp
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
-  <span class="token comment">//사용자가 입력한 문장을 기반으로</span>
+  <span class="token comment">//사용자가 입력한 문장을 기반으로 대화생성</span>
   <span class="token keyword">const</span> completion <span class="token operator">=</span> <span class="token keyword">await</span> openai<span class="token punctuation">.</span><span class="token function">createChatCompletion</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">model</span><span class="token operator">:</span> <span class="token string">'gpt-3.5-turbo'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">messages</span><span class="token operator">:</span> messages<span class="token punctuation">,</span>
