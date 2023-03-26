@@ -3,7 +3,7 @@ date: '2023-03-26'
 title: 'OpenAI API'
 categories: ['AI']
 summary: 'Chatgpt API 사용해보기'
-thumbnail: './chatgptthumbnail.png'
+thumbnail: './chatgptthumbnail.jpg'
 ---
 
 ## ChatGpt API 연동해보기
@@ -52,11 +52,11 @@ npm install express
 
 공식문서에서 node.js에서 사용하는 방법을 참조하여 코드를 짜겠습니다.
 
-#### 셋팅
+### node.js 셋팅 관련 문서
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/ai/settingexample.PNG](../static/ai/settingexample.PNG)
 
-#### 대화를 생성하는 데 사용되는 함수(Python 예시)
+### 대화를 생성하는 데 사용되는 함수(Python 예시)
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/ai/settingexample2.PNG](../static/ai/settingexample2.PNG)
 
@@ -68,15 +68,15 @@ system은 "챗봇이 이해하지 못한 입력" 또는 "일시적으로 문제�
 
 등의 메시지가 system 메시지로 처리되고 user는 사용자 채팅 assistant는 답변입니다.
 
-#### API가 응답으로 보내주는 데이터
+### API가 응답으로 보내주는 데이터
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/ai/settingexample3.PNG](../static/ai/settingexample3.PNG)
 
-#### 구현 화면
+### 구현 화면
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/ai/chatai.PNG](../static/ai/chatai.PNG)
 
-#### app.js
+### app.js
 
 ```javascript
 const { Configuration, OpenAIApi } = require('openai')
@@ -133,7 +133,7 @@ app.post('/aiChat', async function (req, res) {
 app.listen(3000)
 ```
 
-#### index.html
+### index.html
 
 chatgpt api를 사용하는거니까 디자인을 gpt한테 얻어서 사용하였습니다.
 
@@ -303,9 +303,9 @@ chatgpt api를 사용하는거니까 디자인을 gpt한테 얻어서 사용하�
 
 ChatGpt를 웹사이트에서 사용만 하는 중인데
 
-API를 연동할 수 있다는 것을 알고는 있었지만 경험하지는 못했었습니다.
+API를 연동할 수 있다는 것을 알고는 있었지만 경험하지는 못하였지만
 
-이번에 기회가 되어서 연동을 해보았습니다.
+이번에는 기회가 되어서 연동을 해보았습니다.
 
 아이디어가 있다면 충분히 AI API 연동을 이용하여
 
