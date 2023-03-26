@@ -120,7 +120,7 @@ app.post('/aiChat', async function (req, res) {
     }
   }
 
-  //사용자가 입력한 문장을 기반으로
+  //사용자가 입력한 문장을 기반으로 대화생성
   const completion = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     messages: messages,
