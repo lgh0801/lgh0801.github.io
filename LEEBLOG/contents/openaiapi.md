@@ -2,7 +2,7 @@
 date: '2023-03-26'
 title: 'OpenAI API'
 categories: ['AI']
-summary: 'Chatgpt API 사용해보기'
+summary: 'ChatGpt API 연동해보기'
 thumbnail: './openaithumbnail.png'
 ---
 
