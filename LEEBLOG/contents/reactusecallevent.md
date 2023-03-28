@@ -52,6 +52,37 @@ useCallback은 deps 배열에 넣은 값이 변경될 때만 안에 있는 메�
 
 JS가 바라봤을 때도 같은 함수로 인식합니다.
 
+```javascript
+const Counter = ({ handleClick }) => {
+  // Counter 컴포넌트는 handleClick 함수를 전달받아 버튼을 렌더링합니다.
+  return (
+    <div>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  )
+}
+
+const App = () => {
+  // count 상태를 useState 훅을 이용하여 초기값을 0으로 설정합니다.
+  const [count, setCount] = useState(0)
+
+  // handleClick 함수를 useCallback 훅을 이용해 메모이제이션합니다.
+  // count 상태가 변경될 때마다 함수가 재생성됩니다.
+  const handleClick = useCallback(() => {
+    setCount(count + 1)
+  }, [count])
+
+  // App 컴포넌트는 Counter 컴포넌트를 렌더링합니다.
+  // handleClick 함수를 Counter 컴포넌트에게 전달합니다.
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <Counter handleClick={handleClick} />
+    </div>
+  )
+}
+```
+
 ## useEvent
 
 useCallback은 deps값이 변경되면 같은 주소에 머물지 않고 새로운 함수가 만들어집니다.
