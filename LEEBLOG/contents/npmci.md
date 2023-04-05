@@ -1,5 +1,5 @@
 ---
-date: '2023-01-01'
+date: '2022-05-09'
 title: 'npm ci/npm cit'
 categories: ['Node.JS']
 summary: '배포시 고정된 버전으로 설치'
