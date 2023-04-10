@@ -22,10 +22,6 @@ REST API키를 사용하여 구현했습니다.
 
 카카오 API를 사용하기 위한 정보들은 Redux를 사용해서 관리하였습니다.
 
-아래는 Redux 관련 일부 소스 사진입니다.
-
-## ![file:///C:/Reactblog/LEEBLOG/static/react/redux.PNG](../static/react/redux.PNG)
-
 카카오 로그인 기능
 
 ```javascript
