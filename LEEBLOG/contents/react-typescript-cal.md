@@ -30,7 +30,7 @@ C = 초기화 / CE 한칸씩 지우기 / . 소수점 / 사칙연산
 //App.tsx
 import Adder from './commponent/adder'
 
-function App() {
+const App = () => {
   return <Adder />
 }
 

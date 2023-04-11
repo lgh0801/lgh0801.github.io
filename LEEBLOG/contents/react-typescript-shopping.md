@@ -35,7 +35,7 @@ thumbnail: './reactthumbnail.png'
 ### App.tsx
 
 ```typescript
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Header from './commponent/Header'
 import Navigation from './commponent/Navigation'
 import HomePage from './pages/HomePage'
