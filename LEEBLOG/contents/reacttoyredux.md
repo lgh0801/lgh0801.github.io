@@ -6,7 +6,7 @@ summary: 'Redux로 상태관리 연습해보기'
 thumbnail: './reactthumbnail.png'
 ---
 
-## redux
+## Redux
 
 ToyProject를 진행하는 중에 부모와 자식 간의 prop 전달을 많이 사용하여서
 
@@ -20,7 +20,7 @@ ToyProject를 진행하는 중에 부모와 자식 간의 prop 전달을 많이 
 
 저는 코드가 많지 않기 때문에 따로 빼지 않고 index.js에 코드를 구현했습니다.
 
-#### index.js
+### index.js
 
 ```javascript
 import ReactDOM from 'react-dom'
