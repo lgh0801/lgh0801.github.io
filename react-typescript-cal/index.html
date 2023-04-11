@@ -11,7 +11,7 @@
 <div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token comment">//App.tsx</span>
 <span class="token keyword">import</span> Adder <span class="token keyword">from</span> <span class="token string">'./commponent/adder'</span>
 
-<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token operator">&lt;</span>Adder <span class="token operator">/</span><span class="token operator">></span>
 <span class="token punctuation">}</span>
 
@@ -50,8 +50,8 @@
   grid-gap: 20px;
 </span><span class="token template-punctuation string">`</span></span>
 <span class="token keyword">const</span> Button <span class="token operator">=</span> styled<span class="token punctuation">.</span>button<span class="token operator">&lt;</span>BackgroundProps<span class="token operator">></span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-  background-color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token parameter">props</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>backgroundColor<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
-  color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token parameter">props</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>color <span class="token operator">||</span> <span class="token string">''</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  background-color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>props <span class="token operator">=></span> props<span class="token punctuation">.</span>backgroundColor<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>props <span class="token operator">=></span> props<span class="token punctuation">.</span>color <span class="token operator">||</span> <span class="token string">''</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
   border: none;
   width: 100%;
   height: 60px;
