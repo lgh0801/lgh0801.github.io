@@ -22,20 +22,6 @@ iOS 앱을 빌드하기 위해서는 애플 개발자 계정이 필요합니다.
 
 하지만 스토어에 올리기 위해서는 계정이 필요합니다.
 
-# Code Challenge
-
-저는 우선 React Native가 무엇인지 기초를 배우고싶어서
-
-유튜버 노마드코더님에 기초(왕초보를 위한 React Native 101)강의를 수강완료 하였습니다.
-
-기초과정은 무료이고 심화는 유료입니다.
-
-강의 링크: https://nomadcoders.co/react-native-for-beginners/lobby
-
-강의를 끝으로 몇가지 Code Challenge 과제를 내주셔서
-
-복습할겸 과제를 완료하며 React Native에 기본을 학습했습니다.
-
 # app.json 설정
 
 ```javascript
