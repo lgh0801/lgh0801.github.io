@@ -1,8 +1,8 @@
 ---
-date: '2022-11-20'
-title: 'Expo 개발 ReactNative 앱 빌드 및 배포'
-categories: ['React Native']
-summary: 'ReactNatvie 기초강의 수강 후 Code Challenge'
+date: '2023-07-01'
+title: 'Expo 앱 빌드 및 배포'
+categories: ['React Native', 'Expo']
+summary: 'Expo 개발 ReactNative 앱 빌드 및 배포'
 thumbnail: './reactthumbnail.png'
 ---
 

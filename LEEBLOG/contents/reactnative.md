@@ -1,7 +1,7 @@
 ---
 date: '2022-11-20'
 title: 'ReactNative 기초/CodeChallenge'
-categories: ['React Native']
+categories: ['React Native', 'Expo']
 summary: 'ReactNatvie 기초강의 수강 후 Code Challenge'
 thumbnail: './reactthumbnail.png'
 ---
