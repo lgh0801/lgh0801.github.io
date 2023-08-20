@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `근두리의 블로그`,
+    title: `이근혁의 블로그`,
     description: `주니어 프론트엔드 개발자로서의 저를 표현한 블로그입니다.`,
     author: `Hyeok`,
     siteUrl: 'https://lgh0801.github.io/',
@@ -44,8 +44,8 @@ module.exports = {
           formats: ['auto', 'webp'],
           quality: 100,
           placeholder: 'blurred',
-        }
-      }
+        },
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
@@ -95,4 +95,4 @@ module.exports = {
       },
     },
   ],
-};
+}
