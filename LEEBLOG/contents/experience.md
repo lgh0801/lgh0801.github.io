@@ -1,5 +1,5 @@
 ---
-date: '2023-08-17'
+date: '2023-08-18'
 title: '개발 성장(OJT, 실무)'
 categories:
   [
