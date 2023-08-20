@@ -1,0 +1,128 @@
+---
+date: '2023-08-17'
+title: '개발 성장(OJT, 실무)'
+categories:
+  [
+    'Typescript',
+    'React',
+    'React Native',
+    'Expo',
+    'Styled-Components',
+    'AI',
+    'ToyProject',
+  ]
+summary: '짧은 시간 경험'
+thumbnail: './reactthumbnail.png'
+---
+
+## 회사 입사 OJT 진행
+
+작은 중소기업에 입사하여 짧았지만 약 110일 동안에 혼자서 많이 성장한 이야기를 풀어보려고 합니다.
+
+우선 저는 프론트엔드 신입으로 들어가게 되었습니다.
+
+이야기를 시작하자면 이때 당시에 React,ReactNative,Expo,TypeScrpt 실무 경험 이 없어서
+
+신입 포지션으로 입사하였었습니다. 첫 출근을 하고 다음 날이 되었을 때 근무환경은
+
+다른 팀장님들은 모두 다른 곳에서 근무하고
+
+저 혼자만 사무실에서 남아서 따로 떨어진 채 백지 상태에서 개발 OJT를 진행하였습니다.
+
+아래 사진은 전달받은 피그마에서 OJT로 만든 기획안입니다.
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/pigma.PNG](../static/experience/pigma.PNG)
+
+우선 위 피그마를 참고하면서 처음부터 끝까지 ReactNative,Expo,TypeScrpt를 사용해서 앱을 개발하였습니다.
+
+뭔가 앱은 키보드라든지 퍼블리싱을 좀 다르게 신경을 써야 해서 좀 더 적응하느라 시간이 걸렸던 것 같습니다.
+
+아래는 저가 앱으로 개발한 일부를 캡처한 화면입니다.
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/app1.jpg](../static/experience/app1.jpg)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/app2.jpg](../static/experience/app2.jpg)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/app3.jpg](../static/experience/app3.jpg)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/app4.jpg](../static/experience/app4.jpg)
+
+그리고 이번에는 OJT앱이 끝나고 똑같은 기획을 웹 모바일로 만들라고 하셔서
+
+이번에도 백지상태에서 React, TypeScrpt, styled-components를 사용해서 웹 모바일을 만들었습니다.
+
+ReactNative와 React가 아무래도 앱과 웹이어서 조금씩은
+
+달라서 처음에는 다시 React에 적응해가면서 OJT 개발을 진행하였습니다.
+
+아래는 웹으로 개발한 일부를 캡처한 화면입니다.
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/web1.PNG](../static/experience/web1.PNG)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/web2.PNG](../static/experience/web2.PNG)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/web3.PNG](../static/experience/web3.PNG)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/web4.PNG](../static/experience/web4.PNG)
+
+OJT를 마치면서
+
+진행 동안에 언어 사용과 다양한 라이브러리 등에 익숙해지고
+
+혼자서 개발하는 경험 component 개념과 프로젝트 구조
+
+그리고 AI 사용과 구글링에 더욱더 익숙해지는 경험
+
+마지막으로는 혼자서 문제를 해결하는 능력을 더 향상했던 경험이었습니다.
+
+## 회사 입사 실무 진행
+
+OJT앱을 만들고 OJT웹을 만들고 있는 도중에 기획안을 전달받고 앱 개발 실무에 투입되었습니다.
+
+물론 실무도 혼자 남겨진 채 팀장님과 메신저로 소통하면서 진행하였습니다.
+
+저는 포지션이 프론트였으며 팀장님은 백엔드 부분을 담당하셨습니다.
+
+개발 내용은 기존 프로젝트에 새로운 기능들과 수정하고 싶은 기능들 그리고 오류라든지
+
+기획안이 나오면 개발하고 수정하는 작업이었습니다.
+
+처음에는 아예 새로 개발하는 부분에서는 괜찮았으나 아닌 경우는 방대한 코드양과 복잡하면서 주석이 없기 때문에
+
+이런 부분들은 익숙해지기 전까지는 친해지느라 고생했었습니다.
+
+그리고 개발을 진행하면서 잠시 기획이 있는 시간에는 버전 마이그레이션 작업등도 함께 진행하였습니다.
+
+버전 마이그레이션을 최신버전으로 하였을 때 앱이 켜지지 않는 이슈가 발생해서 안드로이드 스튜디오에
+
+Logcat등을 보면서 작업을 진행하면서 문제를 해결해나갔었습니다.
+
+결론적으로 오히려 주석이 없고 코드가 복잡하니까 보는 눈이 점점 성장하게 됐던 것 같습니다.
+
+이걸 왜 사용했을까? 이걸 굳이 사용해야 했나? 아, 이래서 사용했구나!
+
+이렇게 자신한테 되물으면서 진행했던 것 같습니다.
+
+실무 기획안 개발이 다 끝나면 잠시 쉬는 타임이 있어서 그럴 때는 OJT 웹을 진행했었습니다.
+
+OJT 웹을 진행하면서 실무에서 좋다고 생각하는 프로젝트 구조라든지 기존 코드에서
+
+괜찮다고 생각하는 부분들은 OJT 웹에 적용해가면서 진행하였습니다.
+
+아래는 저가 진행하였던 프로젝트에 첫 화면입니다.
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/workinglevel.jpg](../static/experience/workinglevel.jpg)
+
+## 회사 재정 문제로 권고사직
+
+끝으로
+
+실무 개발 진행 중에 급여가 밀려서 문의하였는데
+
+급여가 많이 밀릴 거 같다고 저 포함해서 다른 팀에 신입분들 모두 권고사직으로 퇴사하였습니다.
+
+참 씁쓸하면서 약 110일 동안 혼자 스트레스도 받으면서 열심히 개발도 하면서 보람도 느꼈었지만...
+
+이렇게 되었습니다.
+
+그래도 혼자서 개발하며 성장할 수 있었던 좋은 경험이었다고 생각하기로 했습니다!
