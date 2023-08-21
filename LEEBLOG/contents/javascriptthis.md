@@ -64,12 +64,14 @@ this값은 함수를 만날 때마다 바뀔 수 있기 때문에 본인이 원�
 ```javascript
 let obj = {
   name: ['kim', 'lee'],
+  outerThis: this,
   func: function () {
-    console.log(this)
+    let arrowFunc = () => {
+      console.log(this) // 외부 this
+    }
+    arrowFunc()
   },
 }
 
 obj.func()
-
-//{name: Array(2), func: ƒ} * 2
 ```
