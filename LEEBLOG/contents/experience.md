@@ -21,7 +21,7 @@ thumbnail: './reactthumbnail.png'
 
 왜 더 이상 이어갈 수 없었는지에 대한 이야기를 풀어보려고 합니다.
 
-우선 저는 프론트엔드 신입으로 들어가게 되었습니다.
+저는 프론트엔드 신입으로 들어가게 되었습니다.
 
 이야기를 시작하자면 이때 당시에 React,ReactNative,Expo,TypeScrpt 실무 경험 이 없어서
 
@@ -35,11 +35,11 @@ thumbnail: './reactthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/pigma.PNG](../static/experience/pigma.PNG)
 
-우선 위 피그마를 참고하면서 처음부터 끝까지 ReactNative,Expo,TypeScrpt를 사용해서 앱을 개발하였습니다.
+위 피그마를 참고하면서 처음부터 끝까지 ReactNative,Expo,TypeScrpt를 사용해서 앱을 개발하였습니다.
 
 뭔가 앱은 키보드라든지 퍼블리싱을 좀 다르게 신경을 써야 해서 좀 더 적응하느라 시간이 걸렸던 것 같습니다.
 
-아래는 저가 앱으로 개발한 일부를 캡처한 화면입니다.
+아래는 앱으로 개발한 일부를 캡처한 화면입니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/app1.jpg](../static/experience/app1.jpg)
 
@@ -111,7 +111,7 @@ OJT 웹을 진행하면서 실무에서 좋다고 생각하는 프로젝트 구�
 
 괜찮다고 생각하는 부분들은 OJT 웹에 적용해가면서 진행하였습니다.
 
-아래는 저가 진행하였던 프로젝트에 첫 화면입니다.
+아래는 진행하였던 프로젝트에 첫 화면입니다.
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/workinglevel.jpg](../static/experience/workinglevel.jpg)
 
