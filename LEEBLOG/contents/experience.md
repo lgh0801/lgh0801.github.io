@@ -51,11 +51,11 @@ thumbnail: './reactthumbnail.png'
 
 그리고 이번에는 OJT앱이 끝나고 똑같은 기획을 웹 모바일로 만들라고 하셔서
 
-이번에도 백지상태에서 React, TypeScrpt, styled-components를 사용해서 웹 모바일을 만들었습니다.
+이번에도 백지상태에서 React, TypeScript, styled-components를 사용해서 웹 모바일을 만들었습니다.
 
-ReactNative와 React가 아무래도 앱과 웹이어서 조금씩은
+ReactNative와 React가 아무래도 앱과 웹이어서 퍼블리싱 부분이 비슷하면서도 다르기 때문에
 
-달라서 처음에는 다시 React에 적응해가면서 OJT 개발을 진행하였습니다.
+처음에는 다시 React에 적응해가면서 OJT 개발을 진행하였습니다.
 
 아래는 웹으로 개발한 일부를 캡처한 화면입니다.
 
@@ -69,9 +69,9 @@ ReactNative와 React가 아무래도 앱과 웹이어서 조금씩은
 
 OJT를 마치면서
 
-진행하는 동안에 언어 사용과 다양한 라이브러리 등에 익숙해지고
+React, ReactNative, TypeScript와 다양한 라이브러리 등에 익숙해지고
 
-React에 component, hook, Memoization 개념과 사용 그리고 폴더 구조에 대한 이해 등을 하게되고
+React에 component, hook, Memoization 개념과 사용 그리고 폴더 구조에 대한 이해 등을 하게 되고
 
 혼자서 문제를 해결하는 능력을 더 향상했던 경험이었습니다.
 
