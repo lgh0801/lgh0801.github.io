@@ -35,9 +35,11 @@ thumbnail: './reactthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/pigma.PNG](../static/experience/pigma.PNG)
 
-위 피그마를 참고하면서 처음부터 끝까지 ReactNative,Expo,TypeScrpt를 사용해서 앱을 개발하였습니다.
+피그마를 참고하여 ReactNative, Expo, TypeScript를 사용하여 앱을 처음부터 끝까지 개발하였으며,
 
-뭔가 앱은 키보드라든지 퍼블리싱을 좀 다르게 신경을 써야 해서 좀 더 적응하느라 시간이 걸렸던 것 같습니다.
+이 과정에서 REST API 방식으로 HTTP 통신을 하였습니다.
+
+앱은 키보드라든지 퍼블리싱을 좀 다르게 신경을 써야 해서 좀 더 적응하느라 시간이 걸렸던 것 같습니다.
 
 아래는 앱으로 개발한 일부를 캡처한 화면입니다.
 
