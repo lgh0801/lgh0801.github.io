@@ -21,7 +21,7 @@ thumbnail: './reactthumbnail.png'
 
 우선 저는 프론트엔드 신입으로 들어가게 되었습니다.
 
-이때 당시에 React,ReactNative,Expo,TypeScrpt 실무 경험 이 없어서 신입 포지션으로 입사하였었습니다.
+이때 당시에 React,ReactNative 실무 경험 이 없어서 신입 포지션으로 입사하였었습니다.
 
 첫 출근을 하고 다음 날이 되었을 때 근무환경은 개발팀장님은 다른 곳에서 근무하고
 
@@ -31,7 +31,7 @@ thumbnail: './reactthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/pigma.PNG](../static/experience/pigma.PNG)
 
-피그마를 참고하여 ReactNative, Expo, TypeScript를 사용하여 앱을 처음부터 끝까지 개발하였으며,
+피그마를 참고하여 ReactNative(Expo), TypeScript를 사용하여 앱을 처음부터 끝까지 개발하였으며,
 
 이 과정에서는 REST API 방식으로 HTTP 통신을 하였습니다.
 
