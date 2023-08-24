@@ -47,7 +47,11 @@ thumbnail: './reactthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/app4.jpg](../static/experience/app4.jpg)
 
-그리고 이번에는 OJT앱이 끝나고 똑같은 기획을 웹 모바일로 만들라고 하셔서
+그리고 이번에는 OJT 앱이 끝나고 실무에 투입되어 개발을 진행하면서
+
+기획팀에서 기획 중일 때는 시간이 남기 때문에
+
+OJT에서 앱으로 만든 것을 웹 모바일로 만들라고 하셔서 진행하였습니다.
 
 이번에도 백지상태에서 React, TypeScript, styled-components를 사용해서 웹 모바일을 만들었습니다.
 
@@ -75,11 +79,11 @@ React에 component, hook, Memoization 개념과 사용 그리고 폴더 구조�
 
 ## 회사 입사 실무 진행
 
-OJT앱을 만들고 OJT웹을 만들고 있는 도중에 
+OJT앱을 만들고 OJT웹을 만들고 있는 도중에
 
 정확히는 입사하고 한달이 지나서 기획안을 전달받고 앱 개발 실무에 투입되었습니다.
 
-물론 실무도 혼자 남겨진 채 팀장님과 메신저로 소통하면서 진행하였습니다.
+작업을 진행할 때는 팀장님과 메신저로 소통하면서 진행하였습니다.
 
 저는 포지션이 프론트였으며 팀장님은 백엔드 부분을 담당하셨습니다.
 
