@@ -119,7 +119,7 @@ OJT 웹을 진행하면서 실무에서 좋다고 생각하는 프로젝트 구�
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/workinglevel.jpg](../static/experience/workinglevel.jpg)
 
-## 회사 재정 문제로 권고사직
+## 회사 불황으로 권고사직
 
 이야기를 끝으로
 
