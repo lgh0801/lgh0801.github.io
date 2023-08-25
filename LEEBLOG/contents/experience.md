@@ -69,7 +69,7 @@ ReactNative와 React가 아무래도 앱과 웹이어서 퍼블리싱 부분이 
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/web4.PNG](../static/experience/web4.PNG)
 
-OJT를 마치면서
+OJT를 마치면서 설계와
 
 React, ReactNative, TypeScript와 다양한 라이브러리 등에 익숙해지고
 
