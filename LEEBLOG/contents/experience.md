@@ -17,7 +17,7 @@ thumbnail: './reactthumbnail.png'
 
 ## 회사 입사 OJT 진행
 
-짧았지만 약 110일 동안에 혼자서 많이 경험하고 성장한 이야기를 풀어보려고 합니다.
+짧았지만 혼자서 많이 경험하고 성장한 이야기를 하겠습니다.
 
 우선 저는 프론트엔드 신입으로 들어가게 되었습니다.
 
@@ -31,7 +31,7 @@ thumbnail: './reactthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/pigma.PNG](../static/experience/pigma.PNG)
 
-피그마를 참고하여 ReactNative(Expo), TypeScript를 사용하여 앱을 처음부터 끝까지 개발하였으며,
+피그마를 참고하여 퍼블리싱하고 ReactNative(Expo), TypeScript를 사용하여 앱을 처음부터 끝까지 개발하였으며,
 
 이 과정에서는 REST API 방식으로 HTTP 통신을 하였습니다.
 
@@ -51,9 +51,9 @@ thumbnail: './reactthumbnail.png'
 
 기획팀에서 기획 중일 때는 시간이 남기 때문에
 
-OJT에서 앱으로 만든 것을 웹 모바일로 만들라고 하셔서 진행하였습니다.
+OJT에서 앱으로 만든 것을 모바일 웹으로 만들라고 하셔서 진행하였습니다.
 
-이번에도 백지상태에서 React, TypeScript, styled-components를 사용해서 웹 모바일을 만들었습니다.
+이번에도 백지상태에서 퍼블리싱하고 React, TypeScript, styled-components를 사용해서 웹 모바일을 만들었습니다.
 
 ReactNative와 React가 아무래도 앱과 웹이어서 퍼블리싱 부분이 비슷하면서도 다르기 때문에
 
