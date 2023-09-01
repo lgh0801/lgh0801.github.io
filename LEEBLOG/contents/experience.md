@@ -1,6 +1,6 @@
 ---
 date: '2023-08-20'
-title: '좋은 경험(OJT, 실무)'
+title: 'OJT와 실무에서의 성장기'
 categories:
   [
     'Typescript',
