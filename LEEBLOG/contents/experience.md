@@ -1,6 +1,6 @@
 ---
 date: '2023-08-20'
-title: '개발 성장(OJT, 실무)'
+title: '좋은 경험(OJT, 실무)'
 categories:
   [
     'Typescript',
@@ -31,9 +31,9 @@ thumbnail: './reactthumbnail.png'
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/pigma.PNG](../static/experience/pigma.PNG)
 
-피그마를 참고하여 퍼블리싱하고 ReactNative(Expo), TypeScript를 사용하여 앱을 처음부터 끝까지 개발하였으며,
+피그마를 참고하여 퍼블리싱하고 ReactNative(Expo), TypeScript를 사용하여
 
-이 과정에서는 REST API 방식으로 HTTP 통신을 하였습니다.
+앱을 처음부터 끝까지 개발하였으며, 이 과정에서는 REST API 방식으로 HTTP 통신을 하였습니다.
 
 앱은 키보드라든지 퍼블리싱을 좀 다르게 신경을 써야 해서 좀 더 적응하느라 시간이 걸렸던 것 같습니다.
 
@@ -53,7 +53,7 @@ thumbnail: './reactthumbnail.png'
 
 OJT에서 앱으로 만든 것을 모바일 웹으로 만들라고 하셔서 진행하였습니다.
 
-이번에도 백지상태에서 퍼블리싱하고 React, TypeScript, styled-components를 사용해서 웹 모바일을 만들었습니다.
+기획을 보며 퍼블리싱하고 React, TypeScript, styled-components를 사용해서 웹 모바일을 만들었습니다.
 
 ReactNative와 React가 아무래도 앱과 웹이어서 퍼블리싱 부분이 비슷하면서도 다르기 때문에
 
