@@ -1,5 +1,5 @@
 ---
-date: '2023-03-26'
+date: '2023-08-31'
 title: 'OpenAI API'
 categories: ['AI']
 summary: 'ChatGpt API 연동해보기'
