@@ -1,7 +1,7 @@
 ---
-date: '2023-09-11'
+date: '2022-04-10'
 title: '3대 RDBMS'
-categories: ['DB']
+categories: ['DB', 'SQL']
 summary: '가장 대표적인 RDBMS 들의 특징'
 thumbnail: './databasethumbnail.png'
 ---

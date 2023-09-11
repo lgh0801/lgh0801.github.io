@@ -1,7 +1,7 @@
 ---
 date: '2022-04-11'
 title: 'GraphQL'
-categories: ['GraphQL']
+categories: ['GraphQL', 'SQL']
 summary: 'GraphQL 개념,기초'
 thumbnail: './graphqlthumbnail.png'
 ---
