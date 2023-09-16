@@ -1,7 +1,7 @@
 ---
 date: '2023-08-31'
 title: 'OpenAI API'
-categories: ['AI']
+categories: ['AI', 'Javascript', 'Node.JS']
 summary: 'ChatGpt API 연동해보기'
 thumbnail: './openaithumbnail.png'
 ---
