@@ -8,7 +8,7 @@ thumbnail: './nextjsthumbnail.PNG'
 
 ## Next.js
 
-Next.js는 서버 사이트 렌더링, 정적 웹 페이지 생성 등 리액트 기반
+Next.js는 서버 사이드 렌더링, 정적 웹 페이지 생성 등 리액트 기반
 
 웹 애플리케이션 기능들을 가능케 하는 Node.js 위에서 빌드된
 
