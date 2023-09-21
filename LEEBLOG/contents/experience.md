@@ -8,7 +8,6 @@ categories:
     'React Native',
     'Expo',
     'Styled-Components',
-    'AI',
     'ToyProject',
   ]
 summary: '짧은 시간의 성장'
@@ -71,13 +70,11 @@ ReactNative와 React가 아무래도 앱과 웹이어서 퍼블리싱 부분이 
 
 ## ![file:///C:/Reactblog/LEEBLOG/static/experience/web4.PNG](../static/experience/web4.PNG)
 
-OJT를 마치면서 설계와
+OJT를 마치면서 설계와 React, ReactNative, TypeScript와 다양한 라이브러리에 익숙해지는 과정을 거쳤습니다.
 
-React, ReactNative, TypeScript와 다양한 라이브러리 등에 익숙해지고
+이를 통해 React의 component, hook, Memoization 개념과 사용법, 그리고 폴더 구조에 대한 이해를 높일 수 있었습니다.
 
-React에 component, hook, Memoization 개념과 사용 그리고 폴더 구조에 대한 이해 등을 하게 되고
-
-혼자서 문제를 해결하는 능력을 더 향상했던 경험이었습니다.
+또한, 코드 리펙토링을 진행하면서 문제 해결 능력을 향상시키는 중요한 경험을 하게 되었습니다.
 
 ## 회사 입사 실무 진행
 
