@@ -1,6 +1,6 @@
 ---
 date: '2023-08-20'
-title: 'OJT와 실무에서의 성장기'
+title: 'React OJT와 실무 경험'
 categories:
   [
     'Typescript',
