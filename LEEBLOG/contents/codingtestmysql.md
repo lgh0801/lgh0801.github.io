@@ -1,6 +1,6 @@
 ---
 date: '2023-09-09'
-title: '12세이하 여자 환자 출력'
+title: '12세이하 여자 환자 목록 출력'
 categories: ['SQL', 'CodingTest']
 summary: '간단한 select 문제'
 thumbnail: './codingtestthumbnail.png'
