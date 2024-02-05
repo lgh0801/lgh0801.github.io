@@ -1,6 +1,6 @@
 ---
 date: '2023-08-20'
-title: 'React OJT와 실무 경험'
+title: 'React/React Native OJT와 실무 경험'
 categories:
   [
     'Typescript',
@@ -112,9 +112,11 @@ OJT 웹을 진행하면서 실무에서 좋다고 생각하는 프로젝트 구�
 
 괜찮다고 생각하는 부분들은 OJT 웹에 적용해가면서 진행하였습니다.
 
-<!-- 아래는 진행하였던 프로젝트에 첫 화면입니다.
+아래는 실무로 개발 진행하였던 프로젝트에 시작 화면중 일부분 입니다.
 
-## ![file:///C:/Reactblog/LEEBLOG/static/experience/workinglevel.jpg](../static/experience/workinglevel.jpg) -->
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/workinglevel.jpg](../static/experience/INCAVBIOPlatform1.jpg)
+
+## ![file:///C:/Reactblog/LEEBLOG/static/experience/workinglevel.jpg](../static/experience/INCAVBIOPlatform2.jpg)
 
 ## 회사 불황으로 권고사직
 
